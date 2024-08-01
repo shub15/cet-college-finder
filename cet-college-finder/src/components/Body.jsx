@@ -9,9 +9,6 @@ export default function Body() {
           This website can help to find best college
         </p>
       </div>
-      <div className=''>
-        <Form />
-      </div>
     </div>
 
   )
