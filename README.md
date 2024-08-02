@@ -5,6 +5,6 @@ npm install
 npm update
 ```
 Following dependenices are used:
-1. "tailwindcss": "^3.4.7"
+1. TailwindCSS ^3.4.7
 2. @headlessui/react
 3. @heroicons/react
