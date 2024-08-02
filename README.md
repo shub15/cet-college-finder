@@ -9,5 +9,5 @@ Currently, two official plugins are available:
 
 Run the code in terminal to download all dependencies: 
 ```
-`npm run init`
+npm run init
 ```
