@@ -1,5 +1,10 @@
 import React from 'react'
 
+const bg = {
+    "color" : "bg-blue-950", 
+    "useful" : "text-blue-100 hover:text-blue-500 font-semibold block pb-2 text-sm"
+}
+
 export default function Footer() {
     return (
         <>
@@ -7,20 +12,20 @@ export default function Footer() {
             {/* <link
                 rel="stylesheet"
                 href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
-            />
+            /> */}
             <link
                 rel="stylesheet"
                 href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-            /> */}
-            <footer className="relative bg-blue-200 pt-8 pb-6">
+            />
+            <footer className={`relative ${bg.color} pt-8 pb-6`}>
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap text-left lg:text-left">
                         <div className="w-full lg:w-6/12 px-4">
-                            <h4 className="text-3xl fonat-semibold text-blue-700">
-                                Let's keep in touch!
+                            <h4 className="text-3xl fonat-semibold text-white">
+                                CET College Finder
                             </h4>
-                            <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
-                                Find us on any of these platforms, we respond 1-2 business days.
+                            <h5 className="text-lg mt-0 mb-2 text-gray-400">
+                                Find your best college.
                             </h5>
                             <div className="mt-6 lg:mb-0 mb-6">
                                 <button
@@ -35,17 +40,19 @@ export default function Footer() {
                                 >
                                     <i className="fab fa-facebook-square" />
                                 </button>
-                                <button
+                                {/* <button
                                     className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                                     type="button"
                                 >
                                     <i className="fab fa-dribbble" />
-                                </button>
+                                </button> */}
                                 <button
                                     className="bg-white text-blue-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                                     type="button"
                                 >
-                                    <i className="fab fa-github" />
+                                    <a href="https://github.com/shub15">
+                                        <i className="fab fa-github" />
+                                    </a>
                                 </button>
                             </div>
                         </div>
@@ -58,7 +65,7 @@ export default function Footer() {
                                     <ul className="list-unstyled">
                                         <li>
                                             <a
-                                                className="text-blue-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                                className={bg.useful}
                                                 href="https://www.creative-tim.com/presentation?ref=njs-profile"
                                             >
                                                 About Us
@@ -66,7 +73,7 @@ export default function Footer() {
                                         </li>
                                         <li>
                                             <a
-                                                className="text-blue-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                                className={bg.useful}
                                                 href="https://blog.creative-tim.com?ref=njs-profile"
                                             >
                                                 Blog
@@ -74,7 +81,7 @@ export default function Footer() {
                                         </li>
                                         <li>
                                             <a
-                                                className="text-blue-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                                className={bg.useful}
                                                 href="https://www.github.com/creativetimofficial?ref=njs-profile"
                                             >
                                                 Github
@@ -82,7 +89,7 @@ export default function Footer() {
                                         </li>
                                         <li>
                                             <a
-                                                className="text-blue-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                                className={bg.useful}
                                                 href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
                                             >
                                                 Free Products
@@ -91,38 +98,38 @@ export default function Footer() {
                                     </ul>
                                 </div>
                                 <div className="w-full lg:w-4/12 px-4">
-                                    <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                                    <span className="block uppercase text-blue-500 text-sm font-semibold mb-2">
                                         Other Resources
                                     </span>
                                     <ul className="list-unstyled">
-                                        <li>
+                                        {/* <li>
                                             <a
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                                                 href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
                                             >
                                                 MIT License
                                             </a>
-                                        </li>
-                                        <li>
+                                        </li> */}
+                                        {/* <li>
                                             <a
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                                                 href="https://creative-tim.com/terms?ref=njs-profile"
                                             >
                                                 Terms &amp; Conditions
                                             </a>
-                                        </li>
-                                        <li>
+                                        </li> */}
+                                        {/* <li>
                                             <a
                                                 className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                                                 href="https://creative-tim.com/privacy?ref=njs-profile"
                                             >
                                                 Privacy Policy
                                             </a>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <a
-                                                className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                                href="https://creative-tim.com/contact-us?ref=njs-profile"
+                                                className="text-blue-100 hover:text-blue-500 font-semibold block pb-2 text-sm"
+                                                href="https://github.com/shub15"
                                             >
                                                 Contact Us
                                             </a>
@@ -132,26 +139,19 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <hr className="my-6 border-blueGray-300" />
+                    <hr className="my-6 border-blue-100" />
                     <div className="flex flex-wrap items-center md:justify-between justify-center">
                         <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-                            <div className="text-sm text-blueGray-500 font-semibold py-1">
-                                Copyright © <span id="get-current-year">2021</span>
+                            <div className="text-sm text-blue-100 font-semibold py-1">
+                                Copyright © <span id="get-current-year">2024</span>
                                 <a
-                                    href="https://www.creative-tim.com/product/notus-js"
-                                    className="text-blueGray-500 hover:text-gray-800"
+                                    href="https://kjsit.somaiya.edu.in"
+                                    className="text-blue-100 hover:text-gray-800"
                                     target="_blank"
                                 >
                                     {" "}
-                                    Notus JS by
+                                    Sahil, Shubham, Vatsal
                                 </a>
-                                <a
-                                    href="https://www.creative-tim.com?ref=njs-profile"
-                                    className="text-blueGray-500 hover:text-blueGray-800"
-                                >
-                                    Creative Tim
-                                </a>
-                                .
                             </div>
                         </div>
                     </div>
