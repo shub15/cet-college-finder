@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const optionBox = "h-10 max-w-full rounded-md border-0 py-0 pl-2 pr-7 focus:ring-2 focus:ring-inset focus:ring-indigo-600 font-semibold sm:text-sm";
 
@@ -415,12 +416,14 @@ export default function SearchCollege() {
                             </div>
                             <div className="grid grid-cols-1 md:col-span-1">
                                 <div className="inline-flex items-center">
-                                    <input
-                                        type="button"
-                                        defaultValue="Search"
-                                        className="bg-blue-500 hover:bg-blue-700 hover:cursor-pointer text-white font-bold py-2 px-4 rounded"
-                                        id="submitbtnresults"
-                                    />
+                                    <Link to="/colleges">
+                                        <input
+                                            type="button"
+                                            defaultValue="Search"
+                                            className="bg-blue-500 hover:bg-blue-700 hover:cursor-pointer text-white font-bold py-2 px-4 rounded"
+                                            id="submitbtnresults"
+                                        />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

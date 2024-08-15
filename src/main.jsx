@@ -2,9 +2,39 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import ErrorPage from './components/ErrorPage.jsx';
+import Form from './components/Form.jsx';
+import Colleges from './components/Colleges.jsx';
+import SearchCollege from './components/SearchCollege.jsx';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <SearchCollege />
+      },
+      {
+        path: "/form",
+        element: <Form />
+      },
+      {
+        path: "/colleges",
+        element: <Colleges />
+      }
+    ]
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
