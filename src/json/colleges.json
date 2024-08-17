@@ -1,0 +1,1722 @@
+[
+    {
+      "id": 1,
+      "CODE": 3012,
+      "COLLEGE_NAME": "Veermata Jijabai Technological Institute VJTI), Matunga, Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "105(99.89)/",
+      "TFWS": 103,
+      "EWS": 308,
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 2,
+      "CODE": 3012,
+      "COLLEGE_NAME": "Veermata Jijabai Technological Institute VJTI), Matunga, Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "242 (99.79)/",
+      "TFWS": 196,
+      "EWS": 671,
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 3,
+      "CODE": 3215,
+      "COLLEGE_NAME": "Bhartiya Vidya Bhavan's Sardar Patel Institute of Technology , Andheri, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": 499,
+      "TFWS": 323,
+      "EWS": 1223,
+      "ALL_INDIA": "403 (98.3884549)"
+    },
+    {
+      "id": 4,
+      "CODE": 3215,
+      "COLLEGE_NAME": "Bhartiya Vidya Bhavan's Sardar Patel Institute of Technology , Andheri, Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "1002 (99.24/",
+      "TFWS": 220,
+      "EWS": 1595,
+      "ALL_INDIA": "539 (98.0150424)"
+    },
+    {
+      "id": 5,
+      "CODE": 3215,
+      "COLLEGE_NAME": "Bhartiya Vidya Bhavan's Sardar Patel Institute of Technology , Andheri, Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "OPEN": 1125,
+      "TFWS": 1105,
+      "EWS": 1913,
+      "ALL_INDIA": "692 (97.5972864)"
+    },
+    {
+      "id": 6,
+      "CODE": 3199,
+      "COLLEGE_NAME": "Shri Vile Parle Kelvani Mandal's Dwarkadas J. Sanghvi College of Engineering, Vile Parle,Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": 1423,
+      "TFWS": 744,
+      "EWS": "",
+      "ALL_INDIA": "804 (97.3237705)"
+    },
+    {
+      "id": 7,
+      "CODE": 3199,
+      "COLLEGE_NAME": "Shri Vile Parle Kelvani Mandal's Dwarkadas J. Sanghvi College of Engineering, Vile Parle,Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "2367 (98.33) /2997 (97.93)",
+      "TFWS": "1702 (98.76)",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 8,
+      "CODE": 3199,
+      "COLLEGE_NAME": "Shri Vile Parle Kelvani Mandal's Dwarkadas J. Sanghvi College of Engineering, Vile Parle,Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND MACHINE LEARNING",
+      "OPEN": "2976 (97.94)/ 4918 (96.71)",
+      "TFWS": "2793 (98.04)",
+      "EWS": "",
+      "ALL_INDIA": "1898 (95.1212598)"
+    },
+    {
+      "id": 9,
+      "CODE": 3199,
+      "COLLEGE_NAME": "Shri Vile Parle Kelvani Mandal's Dwarkadas J. Sanghvi College of Engineering, Vile Parle,Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGENCE(AI) AND DATA SCIENCE",
+      "OPEN": 3583,
+      "TFWS": 2938,
+      "EWS": "",
+      "ALL_INDIA": "1510 (95.8720746)"
+    },
+    {
+      "id": 10,
+      "CODE": 3199,
+      "COLLEGE_NAME": "Shri Vile Parle Kelvani Mandal's Dwarkadas J. Sanghvi College of Engineering, Vile Parle,Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "OPEN": "2897 (97.97) /3732 (97.46)",
+      "TFWS": "2334 (98.35)",
+      "EWS": "",
+      "ALL_INDIA": "1287 (96.3564768)"
+    },
+    {
+      "id": 11,
+      "CODE": 3199,
+      "COLLEGE_NAME": "Shri Vile Parle Kelvani Mandal's Dwarkadas J. Sanghvi College of Engineering, Vile Parle,Mumbai (AUTONOMOUS)",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "4407 (97.04)/ 5354 (96.38)",
+      "TFWS": "2906 (97.97)",
+      "EWS": "",
+      "ALL_INDIA": "1902 (95.1208417)"
+    },
+    {
+      "id": 12,
+      "CODE": 3182,
+      "COLLEGE_NAME": "Thadomal Shahani Engineering College, Bandra, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "3209 (97.81)/ 4864 (96.73)",
+      "TFWS": "2968 (97.94)",
+      "EWS": "",
+      "ALL_INDIA": "2061 (94.8265297)"
+    },
+    {
+      "id": 13,
+      "CODE": 3182,
+      "COLLEGE_NAME": "Thadomal Shahani Engineering College, Bandra, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "4716 (96.83) 4885 (96.72)",
+      "TFWS": "3092 (97.87)",
+      "EWS": "",
+      "ALL_INDIA": "2469 (94.0939377)"
+    },
+    {
+      "id": 14,
+      "CODE": 3182,
+      "COLLEGE_NAME": "Thadomal Shahani Engineering College, Bandra, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "7559 (94.99) 8207 (94.59)",
+      "TFWS": "5785 (96.16)",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 15,
+      "CODE": 3185,
+      "COLLEGE_NAME": "Vivekanand Education Society's Institute of Technology, Chembur, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "3681 (97.49) /3791 (97.40)",
+      "TFWS": "3049 (97.88)",
+      "EWS": "",
+      "ALL_INDIA": "2667 (93.7370888)"
+    },
+    {
+      "id": 16,
+      "CODE": 3185,
+      "COLLEGE_NAME": "Vivekanand Education Society's Institute of Technology, Chembur, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "4650 (96.88) /4201 (97.20)",
+      "TFWS": 2191,
+      "EWS": "",
+      "ALL_INDIA": "4194 (91.1377630)"
+    },
+    {
+      "id": 17,
+      "CODE": 3185,
+      "COLLEGE_NAME": "Vivekanand Education Society's Institute of Technology, Chembur, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "7038 (95.35) /7707 (94.91)",
+      "TFWS": "3923 (97.36)",
+      "EWS": "",
+      "ALL_INDIA": "3286 (92.6442557)"
+    },
+    {
+      "id": 18,
+      "CODE": 3209,
+      "COLLEGE_NAME": "K J Somaiya Institute of Engineering and Information Technology, Sion, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "5526 (96.33) /6701 (95.54)",
+      "TFWS": "3154 (97.83)",
+      "EWS": "",
+      "ALL_INDIA": "2584 (93.8827577)"
+    },
+    {
+      "id": 19,
+      "CODE": 3209,
+      "COLLEGE_NAME": "K J Somaiya Institute of Engineering and Information Technology, Sion, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "7085 (95.32)/ 7866 (94.77)",
+      "TFWS": "3379 (97.6)",
+      "EWS": "",
+      "ALL_INDIA": "2969 (93.2156513)"
+    },
+    {
+      "id": 20,
+      "CODE": 3209,
+      "COLLEGE_NAME": "K J Somaiya Institute of Engineering and Information Technology, Sion, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "9020 (94.06) /11206 (92.62)",
+      "TFWS": "5719 (96.20)",
+      "EWS": "",
+      "ALL_INDIA": "4003 (91.4375415)"
+    },
+    {
+      "id": 21,
+      "CODE": 3184,
+      "COLLEGE_NAME": "Fr. Conceicao Rodrigues College of Engineering, Bandra,Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "5843 (96.10) /6782 (95.49)",
+      "TFWS": "4706 (96.83)",
+      "EWS": "",
+      "ALL_INDIA": "4359 (90.8345560)"
+    },
+    {
+      "id": 22,
+      "CODE": 3184,
+      "COLLEGE_NAME": "Fr. Conceicao Rodrigues College of Engineering, Bandra,Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "10203 (93.33)/ 10857 (92.89)",
+      "TFWS": "7513 (95.05)",
+      "EWS": "",
+      "ALL_INDIA": "5059 (89.6466028)"
+    },
+    {
+      "id": 23,
+      "CODE": 3197,
+      "COLLEGE_NAME": "Agnel Charities' FR. C. Rodrigues Institute of Technology, Vashi, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "6818 (95.47) 5708 (96.20)",
+      "TFWS": "4597 (96.92)",
+      "EWS": "",
+      "ALL_INDIA": "3832 (91.7166395)"
+    },
+    {
+      "id": 24,
+      "CODE": 3197,
+      "COLLEGE_NAME": "Agnel Charities' FR. C. Rodrigues Institute of Technology, Vashi, Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "7877 (94.77)/ 7925 (94.76)",
+      "TFWS": "6167 (95.92)",
+      "EWS": "",
+      "ALL_INDIA": "4644 (90.3758504)"
+    },
+    {
+      "id": 25,
+      "CODE": 3139,
+      "COLLEGE_NAME": "Vidyalankar Institute of Technology,Wadala, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "6964 (95.37)/ 6738 (95.52)",
+      "TFWS": "3535 (97.59)",
+      "EWS": "8292 (94.53)",
+      "ALL_INDIA": "4643 (90.3758504)"
+    },
+    {
+      "id": 26,
+      "CODE": 3139,
+      "COLLEGE_NAME": "Vidyalankar Institute of Technology,Wadala, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "8726 (94.26)/",
+      "TFWS": "4658 (96.88)",
+      "EWS": "12714 (91.70)",
+      "ALL_INDIA": "6393 (87.5215506)"
+    },
+    {
+      "id": 27,
+      "CODE": 3176,
+      "COLLEGE_NAME": "Thakur College of Engineering and Technology, Kandivali, Mumbai  (AUTONOMOUS)",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "7836 (94.82)/ 10622 (93.06)",
+      "TFWS": "4430 (97.03)",
+      "EWS": "",
+      "ALL_INDIA": "4410 (90.7772674)"
+    },
+    {
+      "id": 28,
+      "CODE": 3176,
+      "COLLEGE_NAME": "Thakur College of Engineering and Technology, Kandivali, Mumbai  (AUTONOMOUS)",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "10662 (93.06)/ 12411 (91.88)",
+      "TFWS": "5319 (96.44)",
+      "EWS": "",
+      "ALL_INDIA": "5348 (89.2068473)"
+    },
+    {
+      "id": 29,
+      "CODE": 3176,
+      "COLLEGE_NAME": "Thakur College of Engineering and Technology, Kandivali, Mumbai  (AUTONOMOUS)",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "11034 (92.77) 12403 (91.88)",
+      "TFWS": "7571 (94.97)",
+      "EWS": "",
+      "ALL_INDIA": "6523 (87.3852454)"
+    },
+    {
+      "id": 30,
+      "CODE": 3176,
+      "COLLEGE_NAME": "Thakur College of Engineering and Technology, Kandivali, Mumbai  (AUTONOMOUS)",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND MACHINE LEARNING",
+      "OPEN": "11718 (92.31) /13818 (90.98)",
+      "TFWS": "9159 (93.99)",
+      "EWS": "",
+      "ALL_INDIA": "6134 (87.9640285)"
+    },
+    {
+      "id": 31,
+      "CODE": 3176,
+      "COLLEGE_NAME": "Thakur College of Engineering and Technology, Kandivali, Mumbai  (AUTONOMOUS)",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "OPEN": "13011 (91.44) /13725 (91.03)",
+      "TFWS": "8789 (94.19)",
+      "EWS": "",
+      "ALL_INDIA": "5766 (88.5426907)"
+    },
+    {
+      "id": 32,
+      "CODE": 3176,
+      "COLLEGE_NAME": "Thakur College of Engineering and Technology, Kandivali, Mumbai  (AUTONOMOUS)",
+      "BRANCH_LIST": "INTERNET OF THINGS (IoT):",
+      "OPEN": "15603 (89.75) /15725 (89.68)",
+      "TFWS": "13890 (90.88)",
+      "EWS": "",
+      "ALL_INDIA": "7561 (85.6472566)"
+    },
+    {
+      "id": 33,
+      "CODE": 3208,
+      "COLLEGE_NAME": "Don Bosco Institute of Technology, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "8148 (94.61) 8295 (94.53)",
+      "TFWS": "4964 (96.70)",
+      "EWS": "",
+      "ALL_INDIA": "3929 (91.5785599)"
+    },
+    {
+      "id": 34,
+      "CODE": 3208,
+      "COLLEGE_NAME": "Don Bosco Institute of Technology, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "12029 (92.10) 12272 (91.95)",
+      "TFWS": "7929 (94.76)",
+      "EWS": "",
+      "ALL_INDIA": "7290 (86.1442951)"
+    },
+    {
+      "id": 35,
+      "CODE": 3211,
+      "COLLEGE_NAME": "S.I.E.S. Graduate School of Technology, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "9940 (93.48)/",
+      "TFWS": "7563 (94.9)",
+      "EWS": "",
+      "ALL_INDIA": "6742 (87.0338405)"
+    },
+    {
+      "id": 36,
+      "CODE": 3211,
+      "COLLEGE_NAME": "S.I.E.S. Graduate School of Technology, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "12339 (91.91)/",
+      "TFWS": "8190 (94.60)",
+      "EWS": "",
+      "ALL_INDIA": "7392 (85.9305756)"
+    },
+    {
+      "id": 37,
+      "CODE": 3211,
+      "COLLEGE_NAME": "S.I.E.S. Graduate School of Technology, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND MACHINE LEARNING",
+      "OPEN": "25402 (83.294)/",
+      "TFWS": "23616 (84.55)",
+      "EWS": "",
+      "ALL_INDIA": "12098 (78.9683612)"
+    },
+    {
+      "id": 38,
+      "CODE": 3211,
+      "COLLEGE_NAME": "S.I.E.S. Graduate School of Technology, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "17226 (88.74)/",
+      "TFWS": "13098 (91.43)",
+      "EWS": "",
+      "ALL_INDIA": "8998 (83.4011958)"
+    },
+    {
+      "id": 39,
+      "CODE": 3211,
+      "COLLEGE_NAME": "S.I.E.S. Graduate School of Technology, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "22285 (85.31)/",
+      "TFWS": "22796 (85.024)",
+      "EWS": "",
+      "ALL_INDIA": "13187 (77.6013348)"
+    },
+    {
+      "id": 40,
+      "CODE": 3204,
+      "COLLEGE_NAME": "St. Francis Institute of Technology,Borivali, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "10409 (93.17)/",
+      "TFWS": "6536 (95.66)",
+      "EWS": "",
+      "ALL_INDIA": "7443 (85.8695332)"
+    },
+    {
+      "id": 41,
+      "CODE": 3204,
+      "COLLEGE_NAME": "St. Francis Institute of Technology,Borivali, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "12854 (91.53)/",
+      "TFWS": "8589 (94.33)",
+      "EWS": "",
+      "ALL_INDIA": "8048 (84.8602312)"
+    },
+    {
+      "id": 42,
+      "CODE": 3214,
+      "COLLEGE_NAME": "Xavier Institute Of Engineering C/O Xavier Technical Institute,Mahim,Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "10935 (92.84)/",
+      "TFWS": "7047 (95.34)",
+      "EWS": "",
+      "ALL_INDIA": "5674 (88.6844191)"
+    },
+    {
+      "id": 43,
+      "CODE": 3214,
+      "COLLEGE_NAME": "Xavier Institute Of Engineering C/O Xavier Technical Institute,Mahim,Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "12862 (91.53)/",
+      "TFWS": "10402 (93.17)",
+      "EWS": "",
+      "ALL_INDIA": "8033 (84.8850717)"
+    },
+    {
+      "id": 44,
+      "CODE": 3214,
+      "COLLEGE_NAME": "Xavier Institute Of Engineering C/O Xavier Technical Institute,Mahim,Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 45,
+      "CODE": 3135,
+      "COLLEGE_NAME": "Manjara Charitable Trust's Rajiv Gandhi Institute of Technology, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "10547 (93.0)/",
+      "TFWS": "7783 (94.86)",
+      "EWS": "17820 (88.32)",
+      "ALL_INDIA": "8175 (84.6708879)"
+    },
+    {
+      "id": 46,
+      "CODE": 3135,
+      "COLLEGE_NAME": "Manjara Charitable Trust's Rajiv Gandhi Institute of Technology, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "13466 (91.13)/",
+      "TFWS": "8567 (94.34)",
+      "EWS": "24730 (83.69)",
+      "ALL_INDIA": "10471 (81.2903642)"
+    },
+    {
+      "id": 47,
+      "CODE": 3135,
+      "COLLEGE_NAME": "Manjara Charitable Trust's Rajiv Gandhi Institute of Technology, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "18580 (87.89)/",
+      "TFWS": "12078 (92.08)",
+      "EWS": "29714 (80.23)",
+      "ALL_INDIA": "13432 (77.2450625)"
+    },
+    {
+      "id": 48,
+      "CODE": 3194,
+      "COLLEGE_NAME": "Vidyavardhini's College of Engineering and Technology, Vasai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "9317 (93.86)/",
+      "TFWS": "5996 (95.99)",
+      "EWS": "24247 (84.014)",
+      "ALL_INDIA": "10592 (81.1369063)"
+    },
+    {
+      "id": 49,
+      "CODE": 3194,
+      "COLLEGE_NAME": "Vidyavardhini's College of Engineering and Technology, Vasai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "18108 (88.07)/",
+      "TFWS": "8956 (94.0)",
+      "EWS": "32267 (78.43)",
+      "ALL_INDIA": "13405 (77.2882634)"
+    },
+    {
+      "id": 50,
+      "CODE": 3194,
+      "COLLEGE_NAME": "Vidyavardhini's College of Engineering and Technology, Vasai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "21202 (86.01)/",
+      "TFWS": "16286 (89.38)",
+      "EWS": "55134 (59.73)",
+      "ALL_INDIA": "16014 (74.1489497)"
+    },
+    {
+      "id": 51,
+      "CODE": 3194,
+      "COLLEGE_NAME": "Vidyavardhini's College of Engineering and Technology, Vasai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "OPEN": "23120 (84.78)/24554 (83.97)",
+      "TFWS": "11638 (92.33)",
+      "EWS": "53998 (61.25)",
+      "ALL_INDIA": "14638 (75.7045396)"
+    },
+    {
+      "id": 52,
+      "CODE": 3189,
+      "COLLEGE_NAME": "Bharati Vidyapeeth College of Engineering, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "14252 (90.62)/2981 (91.4950)",
+      "TFWS": "9296 (93.92)",
+      "EWS": "16483 (89.16)",
+      "ALL_INDIA": "6863 (86.8690692)"
+    },
+    {
+      "id": 53,
+      "CODE": 3189,
+      "COLLEGE_NAME": "Bharati Vidyapeeth College of Engineering, Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "18081 (88.07)/",
+      "TFWS": "27623 (81.64)",
+      "EWS": "11739 (92.31)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 54,
+      "CODE": 3185,
+      "COLLEGE_NAME": "Vivekanand Education Society's Institute of Technology, Chembur, Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 55,
+      "CODE": 3184,
+      "COLLEGE_NAME": "Fr. Conceicao Rodrigues College of Engineering, Bandra,Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "15465 (89.85) /16763 (89.03)",
+      "TFWS": "15028 (90.12)",
+      "EWS": "",
+      "ALL_INDIA": "10785 (80.8163226)"
+    },
+    {
+      "id": 56,
+      "CODE": 3139,
+      "COLLEGE_NAME": "Vidyalankar Institute of Technology,Wadala, Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 57,
+      "CODE": 3176,
+      "COLLEGE_NAME": "Thakur College of Engineering and Technology, Kandivali, Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "16958 (88.80) /22758 (85.05)",
+      "TFWS": "16254 (89.38)",
+      "EWS": "",
+      "ALL_INDIA": "10398 (81.3437347)"
+    },
+    {
+      "id": 58,
+      "CODE": 3211,
+      "COLLEGE_NAME": "S.I.E.S. Graduate School of Technology, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "33572 (77.53)/",
+      "TFWS": "34601 (76.684",
+      "EWS": "",
+      "ALL_INDIA": "18769 (70.9603132)"
+    },
+    {
+      "id": 59,
+      "CODE": 3207,
+      "COLLEGE_NAME": "Mahatma Education Society's Pillai College of Engineering, New Panvel",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "14247 (90.62)",
+      "TFWS": "9252 (93.94)",
+      "EWS": "",
+      "ALL_INDIA": "8951 (83.4811764)"
+    },
+    {
+      "id": 60,
+      "CODE": 3207,
+      "COLLEGE_NAME": "Mahatma Education Society's Pillai College of Engineering, New Panvel",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "20427 (86.59)/",
+      "TFWS": "14102 (90.72)",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 61,
+      "CODE": 3203,
+      "COLLEGE_NAME": "Atharva College of Engineering,Malad West),Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "16257 (89.38)/",
+      "TFWS": "9659 (93.64)",
+      "EWS": "30347 (79.78)",
+      "ALL_INDIA": "11927 (79.3569955)"
+    },
+    {
+      "id": 62,
+      "CODE": 3203,
+      "COLLEGE_NAME": "Atharva College of Engineering,Malad West),Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "19984 (86.79)/",
+      "TFWS": "10873 (92.87)",
+      "EWS": "41507 (71.24)",
+      "ALL_INDIA": "14804 (75.5725264)"
+    },
+    {
+      "id": 63,
+      "CODE": 3201,
+      "COLLEGE_NAME": "Rizvi Education Society's Rizvi College of Engineering, Bandra,Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "15476 (89.85)/",
+      "TFWS": "9046 (94.06)",
+      "EWS": "",
+      "ALL_INDIA": "7913 (85.0921058)"
+    },
+    {
+      "id": 64,
+      "CODE": 3201,
+      "COLLEGE_NAME": "Rizvi Education Society's Rizvi College of Engineering, Bandra,Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "24463 (83.98)/28412 (81.27)",
+      "TFWS": "24194 (84.04)",
+      "EWS": "",
+      "ALL_INDIA": "11635 (79.6677276)"
+    },
+    {
+      "id": 65,
+      "CODE": 3187,
+      "COLLEGE_NAME": "N.Y.S.S.'s Datta Meghe College of Engineering, Airoli, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "15529 (89.81)/",
+      "TFWS": "12391 (91.88)",
+      "EWS": "24010 (84.09)",
+      "ALL_INDIA": "10424 (81.3437347)"
+    },
+    {
+      "id": 66,
+      "CODE": 3187,
+      "COLLEGE_NAME": "N.Y.S.S.'s Datta Meghe College of Engineering, Airoli, Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "24174 (84.04)/",
+      "TFWS": "15398 (89.90)",
+      "EWS": "29821 (80.22)",
+      "ALL_INDIA": "16103 (74.0077247)"
+    },
+    {
+      "id": 67,
+      "CODE": 3187,
+      "COLLEGE_NAME": "N.Y.S.S.'s Datta Meghe College of Engineering, Airoli, Navi Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "32298 (78.43)/",
+      "TFWS": "25446 (83.29)",
+      "EWS": "39836 (72.65)",
+      "ALL_INDIA": "17660 (72.1246314)"
+    },
+    {
+      "id": 68,
+      "CODE": 3148,
+      "COLLEGE_NAME": "Mahavir Education Trust's Shah & Anchor Kutchhi Engineering College, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "5840 (89.61)/",
+      "TFWS": "12117 (92.01)",
+      "EWS": "",
+      "ALL_INDIA": "11522 (79.8749127)"
+    },
+    {
+      "id": 69,
+      "CODE": 3148,
+      "COLLEGE_NAME": "Mahavir Education Trust's Shah & Anchor Kutchhi Engineering College, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "21259 (85.89)/",
+      "TFWS": "14527 (90.48)",
+      "EWS": "",
+      "ALL_INDIA": "14296 (76.1331756)"
+    },
+    {
+      "id": 70,
+      "CODE": 3148,
+      "COLLEGE_NAME": "Mahavir Education Trust's Shah & Anchor Kutchhi Engineering College, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "25917 (83.07)/",
+      "TFWS": "14957 (90.15)",
+      "EWS": "",
+      "ALL_INDIA": "10529 (81.2074805)"
+    },
+    {
+      "id": 71,
+      "CODE": 3148,
+      "COLLEGE_NAME": "Mahavir Education Trust's Shah & Anchor Kutchhi Engineering College, Mumbai",
+      "BRANCH_LIST": "CYBER SECURITY",
+      "OPEN": "34831 (76.48)/",
+      "TFWS": "37915 (74.28)",
+      "EWS": "",
+      "ALL_INDIA": "16679 (73.3325590)"
+    },
+    {
+      "id": 72,
+      "CODE": 3190,
+      "COLLEGE_NAME": "Terna Engineering College, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "16489 (89.16)/",
+      "TFWS": "10775 (92.955)",
+      "EWS": "21091 (86.22)",
+      "ALL_INDIA": "10695 (80.9703941)"
+    },
+    {
+      "id": 73,
+      "CODE": 3190,
+      "COLLEGE_NAME": "Terna Engineering College, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "21708 (85.76)/",
+      "TFWS": "12641 (91.73)",
+      "EWS": "28070 (81.45)",
+      "ALL_INDIA": "14414 (76.0289070)"
+    },
+    {
+      "id": 74,
+      "CODE": 3190,
+      "COLLEGE_NAME": "Terna Engineering College, Nerul, Navi Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGENCE(AI) AND DATA SCIENCE",
+      "OPEN": "",
+      "TFWS": "18385 (87.94)",
+      "EWS": "31595 (78.92)",
+      "ALL_INDIA": "17014 (72.9152208)"
+    },
+    {
+      "id": 75,
+      "CODE": 3423,
+      "COLLEGE_NAME": "Shree L.R. Tiwari College of Engineering, Mira Road, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "19029 (87.51)/",
+      "TFWS": "13960 (90.81)",
+      "EWS": "",
+      "ALL_INDIA": "12641 (78.3013482)"
+    },
+    {
+      "id": 76,
+      "CODE": 3423,
+      "COLLEGE_NAME": "Shree L.R. Tiwari College of Engineering, Mira Road, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "23969 (84.22)/",
+      "TFWS": "19010 (87.54)",
+      "EWS": "",
+      "ALL_INDIA": "15272 (74.9981955)"
+    },
+    {
+      "id": 77,
+      "CODE": 3183,
+      "COLLEGE_NAME": "Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering, Byculla, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "19302 (87.30)/",
+      "TFWS": "11253 (92.57)",
+      "EWS": "",
+      "ALL_INDIA": "8407 (84.2998086)"
+    },
+    {
+      "id": 78,
+      "CODE": 3183,
+      "COLLEGE_NAME": "Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering, Byculla, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "28283 (81.2)/",
+      "TFWS": "14028 (90.79)",
+      "EWS": "",
+      "ALL_INDIA": "11320 (80.0900469)"
+    },
+    {
+      "id": 79,
+      "CODE": 3183,
+      "COLLEGE_NAME": "Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering, Byculla, Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "29730 (80.2)/42059 (70.89)",
+      "TFWS": "30046 (79.95)",
+      "EWS": "",
+      "ALL_INDIA": "15753 (74.3246742)"
+    },
+    {
+      "id": 80,
+      "CODE": 3183,
+      "COLLEGE_NAME": "Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering, Byculla, Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 81,
+      "CODE": 3035,
+      "COLLEGE_NAME": "Usha Mittal Institute of Technology SNDT Women's University, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "18651 (87.78)",
+      "TFWS": "",
+      "EWS": "25658 (83.18)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 82,
+      "CODE": 3035,
+      "COLLEGE_NAME": "Usha Mittal Institute of Technology SNDT Women's University, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "29729 (80.23)",
+      "TFWS": "",
+      "EWS": "31590 (78.92)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 83,
+      "CODE": 3035,
+      "COLLEGE_NAME": "Usha Mittal Institute of Technology SNDT Women's University, Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND TECHNOLOGY",
+      "OPEN": "29211 (80.76)",
+      "TFWS": "",
+      "EWS": "47046 (66.75)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 84,
+      "CODE": 3035,
+      "COLLEGE_NAME": "Usha Mittal Institute of Technology SNDT Women's University, Mumbai",
+      "BRANCH_LIST": "DATA SCIENCE",
+      "OPEN": "49081 (65.42)",
+      "TFWS": "",
+      "EWS": "65731 (48.84)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 85,
+      "CODE": 3188,
+      "COLLEGE_NAME": "Vasantdada Patil Pratishthan's College Of Engineering and Visual Arts, Sion, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "21485 (85.83)/",
+      "TFWS": "16884 (88.94)",
+      "EWS": "32014 (78.58)",
+      "ALL_INDIA": "15352 (74.8919896)"
+    },
+    {
+      "id": 86,
+      "CODE": 3188,
+      "COLLEGE_NAME": "Vasantdada Patil Pratishthan's College Of Engineering and Visual Arts, Sion, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "30437 (79.78)/",
+      "TFWS": "18745 (87.68)",
+      "EWS": "37170 (74.65)",
+      "ALL_INDIA": "19676 (69.8697669)"
+    },
+    {
+      "id": 87,
+      "CODE": 3188,
+      "COLLEGE_NAME": "Vasantdada Patil Pratishthan's College Of Engineering and Visual Arts, Sion, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGENCE(AI) AND DATA SCIENCE",
+      "OPEN": "32707 (78.09)/",
+      "TFWS": "29264 (80.70)",
+      "EWS": "59528 (55.49)",
+      "ALL_INDIA": "21201 (68.1068611)"
+    },
+    {
+      "id": 88,
+      "CODE": 3475,
+      "COLLEGE_NAME": "A. P. Shah Institute of Technology, Thane",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "22345 (85.27)/",
+      "TFWS": "17486 (88.55)",
+      "EWS": "",
+      "ALL_INDIA": "14613 (75.7045396)"
+    },
+    {
+      "id": 89,
+      "CODE": 3475,
+      "COLLEGE_NAME": "A. P. Shah Institute of Technology, Thane",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "35099 (76.23)/",
+      "TFWS": "25063 (83.44)",
+      "EWS": "",
+      "ALL_INDIA": "17594 (72.1691073)"
+    },
+    {
+      "id": 90,
+      "CODE": 3475,
+      "COLLEGE_NAME": "A. P. Shah Institute of Technology, Thane",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "31245 (79.25)/",
+      "TFWS": "19851 (87.06)",
+      "EWS": "",
+      "ALL_INDIA": "16482 (73.5025407)"
+    },
+    {
+      "id": 91,
+      "CODE": 3475,
+      "COLLEGE_NAME": "A. P. Shah Institute of Technology, Thane",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "OPEN": "35115 (76.22)/",
+      "TFWS": "29389 (80.70)",
+      "EWS": "",
+      "ALL_INDIA": "14041 (76.4844461)"
+    },
+    {
+      "id": 92,
+      "CODE": 3192,
+      "COLLEGE_NAME": "Smt. Indira Gandhi College of Engineering, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "25355 (83.34)/",
+      "TFWS": "20453 (86.59)",
+      "EWS": "33255 (77.72)",
+      "ALL_INDIA": "15477 (74.8329491)"
+    },
+    {
+      "id": 93,
+      "CODE": 3192,
+      "COLLEGE_NAME": "Smt. Indira Gandhi College of Engineering, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "41854 (71.06)/",
+      "TFWS": "41520 (71.12)",
+      "EWS": "31802 (78.86)",
+      "ALL_INDIA": "23654 (65.3165912)"
+    },
+    {
+      "id": 94,
+      "CODE": 3192,
+      "COLLEGE_NAME": "Smt. Indira Gandhi College of Engineering, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "51827 (62.83)/",
+      "TFWS": "64621 (50.79)",
+      "EWS": "61978 (53.25)",
+      "ALL_INDIA": "25402 (63.4441262)"
+    },
+    {
+      "id": 95,
+      "CODE": 3154,
+      "COLLEGE_NAME": "Saraswati Education Society's Saraswati College of Engineering,Kharghar Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "26420 (82.52)/22719 (85.05)",
+      "TFWS": "18110 (88.07)",
+      "EWS": "36853 (75.05)",
+      "ALL_INDIA": "15231 (75.0136647)"
+    },
+    {
+      "id": 96,
+      "CODE": 3154,
+      "COLLEGE_NAME": "Saraswati Education Society's Saraswati College of Engineering,Kharghar Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "36179 (75.71)/31997 (78.58)",
+      "TFWS": "26874 (82.24)",
+      "EWS": "44272 (69.31)",
+      "ALL_INDIA": "20806 (68.6160154)"
+    },
+    {
+      "id": 97,
+      "CODE": 3154,
+      "COLLEGE_NAME": "Saraswati Education Society's Saraswati College of Engineering,Kharghar Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "45745 (68.10)/",
+      "TFWS": "27267 (82.01)",
+      "EWS": "54606 (59.78)",
+      "ALL_INDIA": "29182 (59.0320426)"
+    },
+    {
+      "id": 98,
+      "CODE": 3154,
+      "COLLEGE_NAME": "Saraswati Education Society's Saraswati College of Engineering,Kharghar Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "OPEN": "50223 (63.94)/48786 (65.58)",
+      "TFWS": "34117 (77.29)",
+      "EWS": "62390 (52.21)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 99,
+      "CODE": 3196,
+      "COLLEGE_NAME": "Lokmanya Tilak College of Engineering, Kopar Khairane, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "25932 (83.07)/",
+      "TFWS": "16620 (89.09)",
+      "EWS": "",
+      "ALL_INDIA": "11347 (80.0723490)"
+    },
+    {
+      "id": 100,
+      "CODE": 3196,
+      "COLLEGE_NAME": "Lokmanya Tilak College of Engineering, Kopar Khairane, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "34466 (76.75)/42725 (70.72)",
+      "TFWS": "22781 (85.02)",
+      "EWS": "",
+      "ALL_INDIA": "16062 (74.0536407)"
+    },
+    {
+      "id": 101,
+      "CODE": 3196,
+      "COLLEGE_NAME": "Lokmanya Tilak College of Engineering, Kopar Khairane, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "OPEN": "37817 (74.35)/",
+      "TFWS": "27035 (82.17)",
+      "EWS": "",
+      "ALL_INDIA": "16611 (73.4061248)"
+    },
+    {
+      "id": 102,
+      "CODE": 3196,
+      "COLLEGE_NAME": "Lokmanya Tilak College of Engineering, Kopar Khairane, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "40526 (72.46)/",
+      "TFWS": "26627 (82.32)",
+      "EWS": "",
+      "ALL_INDIA": "22264 (66.9137171)"
+    },
+    {
+      "id": 103,
+      "CODE": 3146,
+      "COLLEGE_NAME": "Jawahar Education Society's Annasaheb Chudaman Patil College of Engineering, Kharghar, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "31114 (79.30)/",
+      "TFWS": "16589 (89.09)",
+      "EWS": "37396 (74.58)",
+      "ALL_INDIA": "19400 (70.1743179)"
+    },
+    {
+      "id": 104,
+      "CODE": 3146,
+      "COLLEGE_NAME": "Jawahar Education Society's Annasaheb Chudaman Patil College of Engineering, Kharghar, Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "36008 (75.71)/",
+      "TFWS": "23569 (84.55)",
+      "EWS": "48378 (65.83)",
+      "ALL_INDIA": "23529 (65.5580036)"
+    },
+    {
+      "id": 105,
+      "CODE": 3146,
+      "COLLEGE_NAME": "Jawahar Education Society's Annasaheb Chudaman Patil College of Engineering, Kharghar, Navi Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "52850 (61.70)/52282 (62.30)",
+      "TFWS": "",
+      "EWS": "61014 (53.91)",
+      "ALL_INDIA": "25976 (62.6234885)"
+    },
+    {
+      "id": 106,
+      "CODE": 3146,
+      "COLLEGE_NAME": "Jawahar Education Society's Annasaheb Chudaman Patil College of Engineering, Kharghar, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "56452 (58.70)/",
+      "TFWS": "29335 (80.70)",
+      "EWS": "62492 (52.01)",
+      "ALL_INDIA": "28310 (60.1995857)"
+    },
+    {
+      "id": 107,
+      "CODE": 3175,
+      "COLLEGE_NAME": "M.G.M.'s College of Engineering and Technology, Kamothe, Navi Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "31149 (79.30)/",
+      "TFWS": "26137 (82.77)",
+      "EWS": "46433 (67.77)",
+      "ALL_INDIA": "18104 (71.6718747)"
+    },
+    {
+      "id": 108,
+      "CODE": 3175,
+      "COLLEGE_NAME": "M.G.M.'s College of Engineering and Technology, Kamothe, Navi Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "35983 (75.71)/",
+      "TFWS": "25599 (83.18)",
+      "EWS": "47305 (66.75)",
+      "ALL_INDIA": "22130 (67.0210573)"
+    },
+    {
+      "id": 109,
+      "CODE": 3218,
+      "COLLEGE_NAME": "Aldel Education Trust's St. John College of Engineering & Management, Vevoor, Palghar",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "31722 (78.91)/",
+      "TFWS": "21214 (86.01)",
+      "EWS": "",
+      "ALL_INDIA": "16906 (72.9990371)"
+    },
+    {
+      "id": 110,
+      "CODE": 3218,
+      "COLLEGE_NAME": "Aldel Education Trust's St. John College of Engineering & Management, Vevoor, Palghar",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "47250 (66.75)/",
+      "TFWS": "30014 (80.06)",
+      "EWS": "",
+      "ALL_INDIA": "24408 (64.3960223)"
+    },
+    {
+      "id": 111,
+      "CODE": 3218,
+      "COLLEGE_NAME": "Aldel Education Trust's St. John College of Engineering & Management, Vevoor, Palghar",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND MACHINE LEARNING",
+      "OPEN": "49065 (65.42)/",
+      "TFWS": "44980 (68.56)",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 112,
+      "CODE": 3218,
+      "COLLEGE_NAME": "Aldel Education Trust's St. John College of Engineering & Management, Vevoor, Palghar",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 113,
+      "CODE": 3210,
+      "COLLEGE_NAME": "Excelsior Education Society's K.C. College of Engineering and Management Studies and Research, Kopri, Thane (E)",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "35206 (76.22)/",
+      "TFWS": "26055 (82.93)",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 114,
+      "CODE": 3210,
+      "COLLEGE_NAME": "Excelsior Education Society's K.C. College of Engineering and Management Studies and Research, Kopri, Thane (E)",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "43933 (69.66)/43340 (70.39)",
+      "TFWS": "21843 (85.64)",
+      "EWS": "",
+      "ALL_INDIA": "23642 (65.3165912)"
+    },
+    {
+      "id": 115,
+      "CODE": 3471,
+      "COLLEGE_NAME": "New Horizon Institute of Technology & Management, Thane",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "34911 (76.48)/",
+      "TFWS": "22142 (85.45)",
+      "EWS": "28484 (81.08)",
+      "ALL_INDIA": "22648 (66.4565571)"
+    },
+    {
+      "id": 116,
+      "CODE": 3471,
+      "COLLEGE_NAME": "New Horizon Institute of Technology & Management, Thane",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "53353 (61.39)/",
+      "TFWS": "38869 (73.41)",
+      "EWS": "97502 (6.64)",
+      "ALL_INDIA": "28043 (60.3186926)"
+    },
+    {
+      "id": 117,
+      "CODE": 3471,
+      "COLLEGE_NAME": "New Horizon Institute of Technology & Management, Thane",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND DESIGN",
+      "OPEN": "62839 (52.01)/",
+      "TFWS": "40193 (72.58)",
+      "EWS": "81991 (30.30)",
+      "ALL_INDIA": "30707 (56.9873631)"
+    },
+    {
+      "id": 118,
+      "CODE": 3223,
+      "COLLEGE_NAME": "Mahatma Education Society's Pillai HOC College of Engineering & Technology, Tal. Khalapur. Dist. Raigad",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "35639 (75.91)/",
+      "TFWS": "26576 (82.44)",
+      "EWS": "",
+      "ALL_INDIA": "20952 (68.3853301)"
+    },
+    {
+      "id": 119,
+      "CODE": 3223,
+      "COLLEGE_NAME": "Mahatma Education Society's Pillai HOC College of Engineering & Technology, Tal. Khalapur. Dist. Raigad",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "45541 (68.32)/",
+      "TFWS": "37165 (74.65)",
+      "EWS": "",
+      "ALL_INDIA": "19719 (69.8332348)"
+    },
+    {
+      "id": 120,
+      "CODE": 3207,
+      "COLLEGE_NAME": "Mahatma Education Society's Pillai College of Engineering, New Panvel",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "47895 (66.07)/",
+      "TFWS": "52408 (61.89)",
+      "EWS": "",
+      "ALL_INDIA": "15908 (74.1966074)"
+    },
+    {
+      "id": 121,
+      "CODE": 3203,
+      "COLLEGE_NAME": "Atharva College of Engineering,Malad West),Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "36658 (75.10)/",
+      "TFWS": "20476 (86.59)",
+      "EWS": "78945 (33.82)",
+      "ALL_INDIA": "21301 (68.0234447)"
+    },
+    {
+      "id": 122,
+      "CODE": 3201,
+      "COLLEGE_NAME": "Rizvi Education Society's Rizvi College of Engineering, Bandra,Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "42417 (70.82)/51136 (63.65)",
+      "TFWS": "47888 (66.077)",
+      "EWS": "",
+      "ALL_INDIA": "21575 (67.5906743)"
+    },
+    {
+      "id": 123,
+      "CODE": 3148,
+      "COLLEGE_NAME": "Mahavir Education Trust's Shah & Anchor Kutchhi Engineering College, Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "59774 (55.49)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "56522 (8.4834391)"
+    },
+    {
+      "id": 124,
+      "CODE": 3423,
+      "COLLEGE_NAME": "Shree L.R. Tiwari College of Engineering, Mira Road, Mumbai",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "58583 (56.25)/",
+      "TFWS": "48225 (65.87)",
+      "EWS": "",
+      "ALL_INDIA": "35466 (51.1532468)"
+    },
+    {
+      "id": 125,
+      "CODE": 3218,
+      "COLLEGE_NAME": "Aldel Education Trust's St. John College of Engineering & Management, Vevoor, Palghar",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 126,
+      "CODE": 3223,
+      "COLLEGE_NAME": "Mahatma Education Society's Pillai HOC College of Engineering & Technology, Tal. Khalapur. Dist. Raigad",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "77803 (34.93)/92678 (14.94)",
+      "TFWS": "62326 (52.21)",
+      "EWS": "",
+      "ALL_INDIA": "38232 (47.4088632)"
+    },
+    {
+      "id": 127,
+      "CODE": 3185,
+      "COLLEGE_NAME": "Vivekanand Education Society's Institute of Technology, Chembur, Mumbai",
+      "BRANCH_LIST": "AUTOMATION AND ROBOTICS",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 128,
+      "CODE": 3200,
+      "COLLEGE_NAME": "Hope Foundation and research center's Finolex Academy of Management and Technology, Ratnagiri",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "38573 (73.64)/",
+      "TFWS": "29942 (80.08)",
+      "EWS": "39360 (72.96)",
+      "ALL_INDIA": "29304 (58.9404652)"
+    },
+    {
+      "id": 129,
+      "CODE": 3200,
+      "COLLEGE_NAME": "Hope Foundation and research center's Finolex Academy of Management and Technology, Ratnagiri",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "33514 (77.53)/ 25953 (83.07)",
+      "TFWS": "15815 (89.61)",
+      "EWS": "50067 (64.03)",
+      "ALL_INDIA": "34294 (52.7405945)"
+    },
+    {
+      "id": 130,
+      "CODE": 3216,
+      "COLLEGE_NAME": "Gharda Foundation's Gharda Institute of Technology, Khed, Ratnagiri",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "39015 (73.41)/",
+      "TFWS": "22728 (85.05)",
+      "EWS": "65321 (49.58)",
+      "ALL_INDIA": "40668 (43.8562844)"
+    },
+    {
+      "id": 131,
+      "CODE": 3216,
+      "COLLEGE_NAME": "Gharda Foundation's Gharda Institute of Technology, Khed, Ratnagiri",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 132,
+      "CODE": 3460,
+      "COLLEGE_NAME": "Universal College of Engineering,Kaman Dist. Palghar",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "33891 (77.35)/",
+      "TFWS": "22808 (85.02)",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 133,
+      "CODE": 3460,
+      "COLLEGE_NAME": "Universal College of Engineering,Kaman Dist. Palghar Universal College of Engineering,Kaman Dist. Palghar",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "46162 (67.84)/",
+      "TFWS": "31006 (79.36)",
+      "EWS": "",
+      "ALL_INDIA": "15668 (74.6356341)"
+    },
+    {
+      "id": 134,
+      "CODE": 3460,
+      "COLLEGE_NAME": "Universal College of Engineering,Kaman Dist. Palghar",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND MACHINE LEARNING",
+      "OPEN": "75795 (37.67)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "82869 (52.0169076)"
+    },
+    {
+      "id": 135,
+      "CODE": 3460,
+      "COLLEGE_NAME": "Universal College of Engineering,Kaman Dist. Palghar",
+      "BRANCH_LIST": "DATA ENGINEERING",
+      "OPEN": "84774 (26.69)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "61000 (89.3806702)"
+    },
+    {
+      "id": 136,
+      "CODE": 3439,
+      "COLLEGE_NAME": "Anjuman-I-Islam's Kalsekar Technical Campus, Panvel",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "39303 (72.96)/",
+      "TFWS": "16177 (89.39)",
+      "EWS": "",
+      "ALL_INDIA": "9050 (83.3302993)"
+    },
+    {
+      "id": 137,
+      "CODE": 3439,
+      "COLLEGE_NAME": "Anjuman-I-Islam's Kalsekar Technical Campus, Panvel",
+      "BRANCH_LIST": "ELECTRONIC & COMPUTER SCIENCE",
+      "OPEN": "91265 (17.22)/",
+      "TFWS": "50049 (64.03)",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 138,
+      "CODE": 3221,
+      "COLLEGE_NAME": "Late Shri. Vishnu Waman Thakur Charitable Trust, Viva Institute of Technology, Shirgaon",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "43624 (69.71)/",
+      "TFWS": "27531 (81.89)",
+      "EWS": "55447 (59.01)",
+      "ALL_INDIA": "26633 (61.9765983)"
+    },
+    {
+      "id": 139,
+      "CODE": 3221,
+      "COLLEGE_NAME": "Late Shri. Vishnu Waman Thakur Charitable Trust, Viva Institute of Technology, Shirgaon",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 140,
+      "CODE": 3467,
+      "COLLEGE_NAME": "Vishwaniketan's Institute of Management Entrepreneurship and Engineering Technology i MEET), Khalapur Dist Raigad",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "50312 (63.94)/",
+      "TFWS": "23059 (84.78)",
+      "EWS": "46584 (67.75)",
+      "ALL_INDIA": "34386 (52.7044633)"
+    },
+    {
+      "id": 141,
+      "CODE": 3467,
+      "COLLEGE_NAME": "Vishwaniketan's Institute of Management Entrepreneurship and Engineering Technology i MEET), Khalapur Dist Raigad",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "45745 (68.10)/",
+      "TFWS": "31643 (78.92)",
+      "EWS": "73732 (40.76)",
+      "ALL_INDIA": "18846 (70.8084229)"
+    },
+    {
+      "id": 142,
+      "CODE": 3193,
+      "COLLEGE_NAME": "Shivajirao S. Jondhale College of Engineering, Dombivali, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "42160 (70.89)/",
+      "TFWS": "33213 (77.72)",
+      "EWS": "53004 (61.52)",
+      "ALL_INDIA": "22658 (66.4565571)"
+    },
+    {
+      "id": 143,
+      "CODE": 3193,
+      "COLLEGE_NAME": "Shivajirao S. Jondhale College of Engineering, Dombivali, Mumbai",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "47067 (66.75)/",
+      "TFWS": "34875 (76.48)",
+      "EWS": "57531 (57.24)",
+      "ALL_INDIA": "25835 (62.8548482)"
+    },
+    {
+      "id": 144,
+      "CODE": 3193,
+      "COLLEGE_NAME": "Shivajirao S. Jondhale College of Engineering, Dombivali, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND MACHINE LEARNING",
+      "OPEN": "59537 (55.49)/82333 (29.87)",
+      "TFWS": "33914 (77.35)",
+      "EWS": "96075 (8.61)",
+      "ALL_INDIA": "41890 (42.1687901)"
+    },
+    {
+      "id": 145,
+      "CODE": 3477,
+      "COLLEGE_NAME": "Chhartrapati Shivaji Maharaj Institute of Technology, Shedung, Panvel",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "52386 (61.89)/",
+      "TFWS": "",
+      "EWS": "81343 (30.42)",
+      "ALL_INDIA": "30462 (57.4493525)"
+    },
+    {
+      "id": 146,
+      "CODE": 3147,
+      "COLLEGE_NAME": "Saraswati Education Society, Yadavrao Tasgaonkar Institute of Engineering & Technology, Karjat",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "56720 (58.60)/",
+      "TFWS": "",
+      "EWS": "83484 (27.41)",
+      "ALL_INDIA": "41653 (42.4061680)"
+    },
+    {
+      "id": 147,
+      "CODE": 3198,
+      "COLLEGE_NAME": "Konkan Gyanpeeth College of Engineering, Karjat",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "57777 (56.800)/ 53133 (61.52)",
+      "TFWS": "26384 (82.52)",
+      "EWS": "49104 (65.42)",
+      "ALL_INDIA": "33556 (53.5100829)"
+    },
+    {
+      "id": 148,
+      "CODE": 3198,
+      "COLLEGE_NAME": "Konkan Gyanpeeth College of Engineering, Karjat",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "77889 (34.93)/",
+      "TFWS": "",
+      "EWS": "73966 (40.25)",
+      "ALL_INDIA": "45741 (35.7695961)"
+    },
+    {
+      "id": 149,
+      "CODE": 3198,
+      "COLLEGE_NAME": "Konkan Gyanpeeth College of Engineering, Karjat",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND DATA SCIENCE",
+      "OPEN": "99550 (2.49)/90605 (17.65)",
+      "TFWS": "56514 (58.70)",
+      "EWS": "64621 (50.79)",
+      "ALL_INDIA": "99420 (20.0646488)"
+    },
+    {
+      "id": 150,
+      "CODE": 3198,
+      "COLLEGE_NAME": "Konkan Gyanpeeth College of Engineering, Karjat",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 151,
+      "CODE": 3202,
+      "COLLEGE_NAME": "Rajendra Mane College of Engineering & Technology Ambav Deorukh",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "58659 (56.25)/",
+      "TFWS": "45900 (67.90)",
+      "EWS": "96119 (8.61)",
+      "ALL_INDIA": "51753 (23.4037208)"
+    },
+    {
+      "id": 152,
+      "CODE": 3217,
+      "COLLEGE_NAME": "Vighnaharata Trust's Shivajirao S. Jondhale College of Engineering & Technology, Shahapur, Asangaon, Dist Thane",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "59942 (55.31)/",
+      "TFWS": "31905 (78.86)",
+      "EWS": "95560 (10.02)",
+      "ALL_INDIA": "32436 (55.0123246)"
+    },
+    {
+      "id": 153,
+      "CODE": 3217,
+      "COLLEGE_NAME": "Vighnaharata Trust's Shivajirao S. Jondhale College of Engineering & Technology, Shahapur, Asangaon, Dist Thane",
+      "BRANCH_LIST": "AUTOMATION AND ROBOTICS",
+      "OPEN": "82173 (30.11)",
+      "TFWS": "90024 (18.22)",
+      "EWS": "",
+      "ALL_INDIA": "42905 (40.4444904)"
+    },
+    {
+      "id": 154,
+      "CODE": 3206,
+      "COLLEGE_NAME": "S.S.P.M.'s College of Engineering, Kankavli",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "65975 (48.84)/",
+      "TFWS": "39553 (72.89)",
+      "EWS": "92173 (15.17)",
+      "ALL_INDIA": "51501 (23.9898154)"
+    },
+    {
+      "id": 155,
+      "CODE": 3206,
+      "COLLEGE_NAME": "S.S.P.M.'s College of Engineering, Kankavli",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "60163 (55.02)/",
+      "TFWS": "44612 (68.99)",
+      "EWS": "71500 (42.44)",
+      "ALL_INDIA": "34206 (52.8368065)"
+    },
+    {
+      "id": 156,
+      "CODE": 3212,
+      "COLLEGE_NAME": "Watumull institute of electronics engineering & computer technology, ulhasnagar",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "69757 (44.86)",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "18309 (71.4037412)"
+    },
+    {
+      "id": 157,
+      "CODE": 3219,
+      "COLLEGE_NAME": "Koti Vidya Charitable Trust's Smt. Alamuri Ratnamala Institute of Engineering and Technology, Sapgaon, Tal. Shahapur",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "71661 (42.44)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "42840 (40.6410729)"
+    },
+    {
+      "id": 158,
+      "CODE": 3219,
+      "COLLEGE_NAME": "Koti Vidya Charitable Trust's Smt. Alamuri Ratnamala Institute of Engineering and Technology, Sapgaon, Tal. Shahapur",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "82080 (30.11)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 159,
+      "CODE": 3219,
+      "COLLEGE_NAME": "Koti Vidya Charitable Trust's Smt. Alamuri Ratnamala Institute of Engineering and Technology, Sapgaon, Tal. Shahapur",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "98920 (3.69)/",
+      "TFWS": "41492 (71.24)",
+      "EWS": "",
+      "ALL_INDIA": "98191 (22.8953821)"
+    },
+    {
+      "id": 160,
+      "CODE": 3222,
+      "COLLEGE_NAME": "Haji Jamaluddin Thim Trust's Theem College of Engineering, At. Villege Betegaon, Boisar",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "72999 (41.13)/",
+      "TFWS": "44192 (69.31)",
+      "EWS": "",
+      "ALL_INDIA": "27650 (60.8512989)"
+    },
+    {
+      "id": 161,
+      "CODE": 3222,
+      "COLLEGE_NAME": "Haji Jamaluddin Thim Trust's Theem College of Engineering, At. Villege Betegaon, Boisar",
+      "BRANCH_LIST": "INFORMATION TECHNOLOGY",
+      "OPEN": "78014 (34.27)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "32958 (54.4681037)"
+    },
+    {
+      "id": 162,
+      "CODE": 3222,
+      "COLLEGE_NAME": "Haji Jamaluddin Thim Trust's Theem College of Engineering, At. Villege Betegaon, Boisar",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "98050 (5.44)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "104575 (6.5584481)"
+    },
+    {
+      "id": 163,
+      "CODE": 3465,
+      "COLLEGE_NAME": "Ideal Institute of Technology, Wada, Dist.Thane",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "77385 (36.42)/89360 (20.06)",
+      "TFWS": "",
+      "EWS": "74982 (38.58)",
+      "ALL_INDIA": "39354 (45.8897936)"
+    },
+    {
+      "id": 164,
+      "CODE": 3351,
+      "COLLEGE_NAME": "Bharat College of Engineering, Kanhor, Badlapur W)",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "77567 (35.43)/",
+      "TFWS": "",
+      "EWS": "97397 (6.718)",
+      "ALL_INDIA": "57249 (5.1445257)"
+    },
+    {
+      "id": 165,
+      "CODE": 3351,
+      "COLLEGE_NAME": "Bharat College of Engineering, Kanhor, Badlapur W)",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "99587 (2.47)/73595 (40.76",
+      "TFWS": "",
+      "EWS": "88185 (20.63)",
+      "ALL_INDIA": "54423 (16.3919335)"
+    },
+    {
+      "id": 166,
+      "CODE": 3224,
+      "COLLEGE_NAME": "Leela Education Society, G.V. Acharya Institute of Engineering and Technology, Shelu, Karjat",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "86475 (23.69)/82067 (30.17)",
+      "TFWS": "",
+      "EWS": "97397 (6.71)",
+      "ALL_INDIA": "104026 (7.8107552)"
+    },
+    {
+      "id": 167,
+      "CODE": 3224,
+      "COLLEGE_NAME": "Leela Education Society, G.V. Acharya Institute of Engineering and Technology, Shelu, Karjat",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING(ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "OPEN": "91495 (16.41)/",
+      "TFWS": "",
+      "EWS": "100434 (0.71)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 168,
+      "CODE": 3224,
+      "COLLEGE_NAME": "Leela Education Society, G.V. Acharya Institute of Engineering and Technology, Shelu, Karjat",
+      "BRANCH_LIST": "COMPUTER SCIENCE AND ENGINEERING (INTERNET OF THINGS AND CYBER SECURITY INCLUDING BLOCKCHAIN TECHNOLOGY)",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 169,
+      "CODE": 3353,
+      "COLLEGE_NAME": "Dilkap Research Institute Of Engineering and Management Studies, At.Mamdapur, Post- Neral, Tal- Karjat, Mumbai",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "86965 (23.64)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "48441 (30.73)"
+    },
+    {
+      "id": 170,
+      "CODE": 3353,
+      "COLLEGE_NAME": "Dilkap Research Institute Of Engineering and Management Studies, At.Mamdapur, Post- Neral, Tal- Karjat, Mumbai",
+      "BRANCH_LIST": "ARTIFICIAL INTELLIGE AND MACHINE LEARNING",
+      "OPEN": "",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 171,
+      "CODE": 3445,
+      "COLLEGE_NAME": "Vishwatmak Jangli Maharaj Ashram Trust (Kokamthan), Atma Malik Institute Of Technology & Research",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "99482 (2.67)/",
+      "TFWS": "44112 (69.66)",
+      "EWS": "67759 (47.44)",
+      "ALL_INDIA": ""
+    },
+    {
+      "id": 172,
+      "CODE": 3447,
+      "COLLEGE_NAME": "G.M.Vedak Institute of Technology, Tala, Raigad.",
+      "BRANCH_LIST": "COMPUTER ENGINEERING",
+      "OPEN": "87616 (22.89)/",
+      "TFWS": "",
+      "EWS": "",
+      "ALL_INDIA": "62640 (85.8373608)"
+    }
+  ]

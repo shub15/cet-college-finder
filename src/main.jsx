@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import ErrorPage from './components/ErrorPage.jsx';
 import Form from './components/Form.jsx';
-import Colleges from './components/Colleges.jsx';
 import SearchCollege from './components/SearchCollege.jsx';
+import CollegeList from './components/CollegeList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/colleges",
-        element: <Colleges />
+        element: <CollegeList />
       }
     ]
   },
