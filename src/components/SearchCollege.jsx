@@ -14,7 +14,7 @@ export default function SearchCollege() {
                     <div className="bg-slate-200 p-10 md:rounded-xl">
                         <div className="grid gap-20 md:gap-10 grid-cols-1 lg:grid-cols-3 lg:grid-rows-2">
                             <div className="grid gap-4 grid-cols-1">
-                                <label htmlFor="Departement Name">Department Name</label>
+                                {/* <label htmlFor="Departement Name">Department Name</label>
                                 <select
                                     id="CETDepartementName"
                                     name="CETDepartementName"
@@ -27,7 +27,7 @@ export default function SearchCollege() {
                                     <option value={4}> Fine Art Education </option>
                                     <option value={5}> Medical Education </option>
                                     <option value={6}> AYUSH </option>
-                                </select>
+                                </select> */}
                                 <br />
                                 <br />
                                 <label htmlFor="Institute Status">Institute Status</label>
@@ -71,7 +71,7 @@ export default function SearchCollege() {
                                 </select>
                             </div>
                             <div className="grid gap-4 grid-cols-1 md:col-span-1">
-                                <label htmlFor="Course Type">Course Name</label>
+                                {/* <label htmlFor="Course Type">Course Name</label>
                                 <select id="CourseName" name="CourseName" className={optionBox}>
                                     {" "}
                                     <option value={0}> All </option>
@@ -80,7 +80,7 @@ export default function SearchCollege() {
                                     <option value={3}> Master in Computer Application (M.C.A.)</option>
                                     <option value={4}> Bachelor of Technology (B. Tech.)</option>
                                     <option value={5}> Bachelor of Engineering (B. E.)</option>
-                                </select>
+                                </select> */}
                                 <br />
                                 <br />
                                 <label htmlFor="Sub Course Name">Minority Status</label>
@@ -128,7 +128,7 @@ export default function SearchCollege() {
                                 </select>
                             </div>
                             <div className="grid gap-4 grid-cols-1 md:col-span-1">
-                                <label htmlFor="Sub Course Name">Sub Course Name</label>
+                                {/* <label htmlFor="Sub Course Name">Sub Course Name</label>
                                 <select
                                     id="SubCourseName"
                                     name="SubCourseName"
@@ -398,7 +398,7 @@ export default function SearchCollege() {
                                     <option value={22997}> Artificial Intelligence</option>
                                     <option value={22998}> B.Planning</option>
                                     <option value={22999}> B.Tech Planning</option>0
-                                </select>
+                                </select> */}
                                 <br />
                                 <br />
                                 <label htmlFor="Institute Status">Autonomy Status</label>

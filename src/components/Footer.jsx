@@ -146,7 +146,7 @@ export default function Footer() {
                                 Copyright © <span id="get-current-year">2024</span>
                                 <a
                                     href="https://kjsit.somaiya.edu.in"
-                                    className="text-blue-100 hover:text-gray-800"
+                                    className="text-blue-100 hover:text-blue-500"
                                     target="_blank"
                                 >
                                     {" "}
