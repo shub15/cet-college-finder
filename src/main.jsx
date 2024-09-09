@@ -10,6 +10,7 @@ import ErrorPage from './components/ErrorPage.jsx';
 import Form from './components/Form.jsx';
 import SearchCollege from './components/SearchCollege.jsx';
 import CollegeList from './components/CollegeList.jsx';
+import LoginPage from './components/LoginPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/colleges",
         element: <CollegeList />
+      },
+      {
+        path: "/login",
+        element: <LoginPage />
       }
     ]
   },
