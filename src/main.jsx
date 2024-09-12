@@ -11,6 +11,10 @@ import Form from './components/Form.jsx';
 import SearchCollege from './components/SearchCollege.jsx';
 import CollegeList from './components/CollegeList.jsx';
 import LoginPage from './components/LoginPage.jsx';
+import Body from './components/Body.jsx';
+import Login from './components/Login.jsx';
+import Dashboard from './components/Dashboard.jsx';
+import Signup from './components/Signup.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +24,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <Body />
+      },
+      {
+        path: "/search",
         element: <SearchCollege />
       },
       {
@@ -32,7 +40,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <LoginPage />
+        element: <Login />
+      },
+      {
+        path: "/signup",
+        element: <Signup />
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />
       }
     ]
   },

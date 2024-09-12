@@ -7,4 +7,6 @@ import com.cetcollegefinder.app.dto.UserDTO;
 public interface UserRepo extends JpaRepository<UserDTO, Integer>{
 
     UserDTO findByName(String name);
+
+    UserDTO findByEmail(String email);
 }

@@ -12,25 +12,43 @@ public class UserService {
     @Autowired
     private UserRepo userRepo;
 
-    public UserDTO saveUserDTO(UserDTO user){
+    public UserDTO saveUserDTO(UserDTO user) {
         return userRepo.save(user);
     }
 
-    public List<UserDTO> getUsers(){
+    public List<UserDTO> getUsers() {
         return userRepo.findAll();
     }
-    public UserDTO getUserById(int id){
+
+    public UserDTO getUserById(int id) {
         return userRepo.findById(id).orElse(null);
     }
-    public UserDTO getUserByName(String name){
+
+    public UserDTO getUserByName(String name) {
         return userRepo.findByName(name);
     }
-    public String deleteUser(int id){
+
+    public UserDTO getUserByEmail(UserDTO user) {
+        return userRepo.findByEmail(user.getEmail());
+    }
+
+    public Boolean authUser(UserDTO user) {
+        UserDTO existingUser = userRepo.findByEmail(user.getEmail());
+        if (existingUser != null) {
+            String existingUserPassword = existingUser.getPassword();
+            String userPassword = user.getPassword();
+            return userPassword.equals(existingUserPassword);
+        } else{
+            return false;
+        }
+    }
+
+    public String deleteUser(int id) {
         userRepo.deleteById(id);
         return "User Deleted" + id;
     }
 
-    public UserDTO updateUser(UserDTO user){
+    public UserDTO updateUser(UserDTO user) {
         UserDTO existingUser = userRepo.findById(user.getId()).orElse(null);
         existingUser.setName(user.getName());
         existingUser.setEmail(user.getEmail());
@@ -38,4 +56,5 @@ public class UserService {
 
         return userRepo.save(existingUser);
     }
+
 }

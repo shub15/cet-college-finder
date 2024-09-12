@@ -10,7 +10,7 @@ export default function Form() {
     <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
       <div className="container max-w-screen-xl mx-auto">
         <div>
-          <h2 className="font-semibold text-xl text-gray-600">Form</h2>
+          <h2 className="font-semibold text-xl text-gray-600">Sign Up</h2>
           <p className="text-gray-500 mb-6">
             It will help us to find best college for you.
           </p>
@@ -23,7 +23,7 @@ export default function Form() {
               <div className="lg:col-span-2">
                 <div className="grid gap-4 gap-y-5 text-lg grid-cols-1 md:grid-cols-5">
                   <div className="md:col-span-5">
-                    <label htmlFor="full_name">Full Name</label>
+                    <label htmlFor="full_name">Name</label>
                     <input
                       type="text"
                       name="full_name"
@@ -44,18 +44,18 @@ export default function Form() {
                     />
                   </div>
                   <div className="md:col-span-3">
-                    <label htmlFor="address">Address / Street</label>
+                    <label htmlFor="address">Location</label>
                     <input
                       type="text"
                       name="address"
                       id="address"
                       className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                       defaultValue=""
-                      placeholder=""
+                      placeholder="Matunga"
                     />
                   </div>
                   <div className="md:col-span-1">
-                    <label htmlFor="zipcode">Zipcode</label>
+                    <label htmlFor="zipcode">Pincode</label>
                     <input
                       type="text"
                       name="zipcode"
