@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -9,7 +10,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('http://localhost:8080/auth', {
         method: 'POST',
@@ -24,6 +25,7 @@ function Login() {
       if (isAuthenticated) {
         // If authentication succeeds, navigate to a dashboard or homepage
         navigate('/dashboard');
+        <Navbar user={email}/>
       } else {
         // Display error message if login fails
         setError('Invalid email or password');

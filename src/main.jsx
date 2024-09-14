@@ -15,6 +15,9 @@ import Body from './components/Body.jsx';
 import Login from './components/Login.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Signup from './components/Signup.jsx';
+import AdminPage from './components/AdminPage.jsx';
+import CollegeForm from './components/CollegeForm.jsx';
+import NotificationForm from './components/NotificationForm.jsx';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +52,20 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />
+      },
+      {
+        path: "/admin",
+        element: <AdminPage />,
+        children: [
+          {
+            path: "/admin",
+            element: <CollegeForm />
+          },
+          {
+            path: "/admin/notifications",
+            element: <NotificationForm />
+          }
+        ]
       }
     ]
   },

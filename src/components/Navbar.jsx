@@ -6,6 +6,7 @@ const navigation = [
     { name: 'Search College', href: '/', current: true },
     { name: 'Form', href: '/form', current: false },
     { name: 'College List', href: '/colleges', current: false },
+    { name: 'Admin', href: '/admin', current: false }
 ]
 
 function classNames(...classes) {
@@ -56,7 +57,7 @@ export default function Navbar(props) {
                                 <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                     <span className="absolute -inset-1.5" />
                                     <span className="sr-only">Open user menu</span>
-                                    <p className='text-white rounded-md px-3 py-2 text-md font-medium'>{props.user.slice(0, 2).toUpperCase()}</p>
+                                    <p className='text-white rounded-md px-3 py-2 text-md font-medium'>{props.user ? props.user.slice(0, 2).toUpperCase() : "Student"}</p>
                                 </MenuButton>
                             </div>
                             <MenuItems
@@ -64,9 +65,9 @@ export default function Navbar(props) {
                                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                             >
                                 <MenuItem>
-                                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                                        Your Profile
-                                    </a>
+                                    <NavLink to="/login" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                                        {props.email ? "Your Profile" : "Login"}
+                                    </NavLink>
                                 </MenuItem>
                                 <MenuItem>
                                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">

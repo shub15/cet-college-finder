@@ -150,7 +150,7 @@ export default function Footer() {
                                     target="_blank"
                                 >
                                     {" "}
-                                    Sahil, Shubham, Vatsal
+                                    Shubham, Sahil, Vatsal
                                 </a>
                             </div>
                         </div>
