@@ -150,7 +150,7 @@ export default function Footer() {
                                     target="_blank"
                                 >
                                     {" "}
-                                    Shubham, Sahil, Vatsal
+                                    Sahil Doshi, Vatsal Umrania, Shubham Maity 
                                 </a>
                             </div>
                         </div>
