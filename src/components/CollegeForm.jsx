@@ -1,34 +1,181 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
-const CollegeForm = () => {
-  const [collegeName, setCollegeName] = useState('');
+function CollegeForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    website: '',
+    location: '',
+    branch: '',
+    collegeType: '',
+    cutoff2023: '',
+    cutoff2022: '',
+    cutoff2021: '',
+    cutoff2020: ''
+  });
 
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("College Added:", collegeName);
-    setCollegeName('');
+
+    // Optional: Add validation here
+
+    // Submit form data to the backend
+    axios.post('http://localhost:8080/api/colleges', formData)
+      .then(response => {
+        console.log('College data submitted successfully', response.data);
+        // Optionally reset the form after submission
+        setFormData({
+          name: '',
+          website: '',
+          location: '',
+          branch: '',
+          collegeType: '',
+          cutoff2023: '',
+          cutoff2022: '',
+          cutoff2021: '',
+          cutoff2020: ''
+        });
+      })
+      .catch(error => {
+        console.error('Error submitting college data:', error);
+      });
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-6">Add College</h2>
+    <div className="container mx-auto px-4">
+      <h1 className="text-2xl font-bold mb-4">Add New College</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
+
+        {/* Name */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">College Name</label>
-          <input
-            type="text"
-            value={collegeName}
-            onChange={(e) => setCollegeName(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            placeholder="Enter college name"
+          <label className="block text-sm font-medium">College Name</label>
+          <input 
+            type="text" 
+            name="name" 
+            value={formData.name} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4" 
+            required
           />
         </div>
-        <button type="submit" className="bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">
+
+        {/* Website */}
+        <div>
+          <label className="block text-sm font-medium">Website</label>
+          <input 
+            type="url" 
+            name="website" 
+            value={formData.website} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+            placeholder="https://example.com"
+          />
+        </div>
+
+        {/* Location */}
+        <div>
+          <label className="block text-sm font-medium">Location</label>
+          <input 
+            type="text" 
+            name="location" 
+            value={formData.location} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+            required
+          />
+        </div>
+
+        {/* Branch */}
+        <div>
+          <label className="block text-sm font-medium">Branch</label>
+          <input 
+            type="text" 
+            name="branch" 
+            value={formData.branch} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+          />
+        </div>
+
+        {/* College Type */}
+        <div>
+          <label className="block text-sm font-medium">College Type</label>
+          <input 
+            type="text" 
+            name="collegeType" 
+            value={formData.collegeType} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+            placeholder="Engineering, Medical, etc."
+          />
+        </div>
+
+        {/* Cutoffs */}
+        <div>
+          <label className="block text-sm font-medium">Cutoff 2023</label>
+          <input 
+            type="number" 
+            name="cutoff2023" 
+            value={formData.cutoff2023} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Cutoff 2022</label>
+          <input 
+            type="number" 
+            name="cutoff2022" 
+            value={formData.cutoff2022} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Cutoff 2021</label>
+          <input 
+            type="number" 
+            name="cutoff2021" 
+            value={formData.cutoff2021} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium">Cutoff 2020</label>
+          <input 
+            type="number" 
+            name="cutoff2020" 
+            value={formData.cutoff2020} 
+            onChange={handleChange} 
+            className="border rounded w-full py-2 px-4"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <button 
+          type="submit" 
+          className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        >
           Add College
         </button>
+
       </form>
     </div>
   );
-};
+}
 
 export default CollegeForm;

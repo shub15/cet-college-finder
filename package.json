@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "axios": "^1.7.7",
     "chart.js": "^4.4.4",
     "express": "^4.19.2",
     "nodemon": "^3.1.4",

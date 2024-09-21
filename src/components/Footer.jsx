@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const bg = {
-    "color" : "bg-blue-950", 
-    "useful" : "text-blue-100 hover:text-blue-500 font-semibold block pb-2 text-sm"
+    "color": "bg-blue-950",
+    "useful": "text-blue-100 hover:text-blue-500 font-semibold block pb-2 text-sm"
 }
 
 export default function Footer() {
@@ -144,14 +145,14 @@ export default function Footer() {
                         <div className="w-full md:w-4/12 px-4 mx-auto text-center">
                             <div className="text-sm text-blue-100 font-semibold py-1">
                                 Copyright © <span id="get-current-year">2024</span>
-                                <a
-                                    href="https://kjsit.somaiya.edu.in"
+                                <Link
+                                    to="/about"
                                     className="text-blue-100 hover:text-blue-500"
-                                    target="_blank"
+                                    // target="_blank"
                                 >
                                     {" "}
-                                    Sahil Doshi, Vatsal Umrania, Shubham Maity 
-                                </a>
+                                    Sahil Doshi, Shubham Maity, Vatsal Umrania
+                                </Link>
                             </div>
                         </div>
                     </div>

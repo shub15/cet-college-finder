@@ -9,15 +9,17 @@ import {
 import ErrorPage from './components/ErrorPage.jsx';
 import Form from './components/Form.jsx';
 import SearchCollege from './components/SearchCollege.jsx';
-import CollegeList from './components/CollegeList.jsx';
-import LoginPage from './components/LoginPage.jsx';
 import Body from './components/Body.jsx';
 import Login from './components/Login.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import Signup from './components/Signup.jsx';
-import AdminPage from './components/AdminPage.jsx';
 import CollegeForm from './components/CollegeForm.jsx';
 import NotificationForm from './components/NotificationForm.jsx';
+import AboutUs from './components/AboutUs.jsx';
+import AdminLogin from './components/AdminPage/AdminLogin.jsx';
+import College from './components/testingCollegeList/College.jsx';
+import Admin from './components/AdminPage/Admin.jsx';
+import PrivateRoute from './components/AdminPage/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
         element: <Body />
       },
       {
+        path: "/about",
+        element: <AboutUs />
+      },
+      {
         path: "/search",
         element: <SearchCollege />
       },
@@ -39,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/colleges",
-        element: <CollegeList />
+        element: <College />
       },
       {
         path: "/login",
@@ -55,14 +61,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/admin",
-        element: <AdminPage />,
+        element: <AdminLogin />
+      },
+      {
+        path: "/admin/home",
+        element: <PrivateRoute><Admin /></PrivateRoute>,
         children: [
           {
-            path: "/admin",
+            path: "/admin/home",
             element: <CollegeForm />
           },
           {
-            path: "/admin/notifications",
+            path: "/admin/home/notifications",
             element: <NotificationForm />
           }
         ]

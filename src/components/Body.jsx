@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { NotificationContext } from './NotificationContext';
 import CutoffChart from './CutoffChart';
+import { Link } from 'react-router-dom';
 
 export default function Body() {
   const { notifications } = useContext(NotificationContext);
@@ -10,6 +11,11 @@ export default function Body() {
         <p className='m-5 sm:m-10 sm:text-5xl text-2xl font-bold text-white'>
           This website can help to find best college
         </p>
+        <div>
+          <Link to="/search">
+            <button className='px-6 py-4 text-center text-white font-semibold bg-blue-900 rounded-lg'>Search Colleges</button>
+          </Link>
+        </div>
       </div>
       <div className="p-8">
         <h1 className="text-3xl font-bold mb-4">Welcome to Our Platform</h1>

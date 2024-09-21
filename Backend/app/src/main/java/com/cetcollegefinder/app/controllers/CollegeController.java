@@ -1,69 +1,57 @@
-// package com.cetcollegefinder.app.controllers;
+package com.cetcollegefinder.app.controllers;
 
-// import org.springframework.web.bind.annotation.RestController;
-// import com.cetcollegefinder.app.dto.CollegeDTO;
-// import com.cetcollegefinder.app.exception.CollegeNotFoundException;
-// import com.cetcollegefinder.app.repositories.CollegeRepo;
+import com.cetcollegefinder.app.dto.College;
+import com.cetcollegefinder.app.services.CollegeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-// import java.util.List;
-// import java.util.Optional;
+import java.util.List;
 
-// import org.springframework.web.bind.annotation.GetMapping;
-// import org.springframework.web.bind.annotation.PathVariable;
-// import org.springframework.web.bind.annotation.RequestMapping;
+@CrossOrigin(origins = "http://localhost:5173")
+@RestController
+@RequestMapping("/api/colleges")
+public class CollegeController {
 
+    @Autowired
+    private CollegeService collegeService;
 
-//operations
-//GET /colleges
-//POST /colleges
-//DELETE /colleges/id
+    @GetMapping
+    public List<College> getAllColleges() {
+        return collegeService.getAllColleges();
+    }
 
-// @RestController
-// @RequestMapping("/api/colleges")
-// public class CollegeController {
-//     private final CollegeRepo collegeRepo;
+    @GetMapping("/{id}")
+    public College getCollegeById(@PathVariable Long id) {
+        return collegeService.getCollegeById(id);
+    }
 
-//     public CollegeController(CollegeRepo collegeRepo) {
-//         this.collegeRepo = collegeRepo;
-//     }
+    @PostMapping
+    public College createCollege(@RequestBody College college) {
+        return collegeService.saveCollege(college);
+    }
 
-    // @GetMapping(path = "")
-    // public CollegeDTO getColleges() {
-    //     return new CollegeDTO(1, "VJTI", "Matunga", "CSE", 200, 100);
-    // }
+    @PutMapping("/{id}")
+    public College updateCollege(@PathVariable Long id, @RequestBody College college) {
+        College existingCollege = collegeService.getCollegeById(id);
+        if (existingCollege != null) {
+            existingCollege.setName(college.getName());
+            existingCollege.setLocation(college.getLocation());
+            existingCollege.setBranch(college.getBranch());
+            existingCollege.setWebsite(college.getWebsite());
+            existingCollege.setDescription(college.getDescription());
+            existingCollege.setCollegeType(college.getCollegeType());
+            existingCollege.setCutoff2023(college.getCutoff2023());
+            existingCollege.setCutoff2022(college.getCutoff2022());
+            existingCollege.setCutoff2021(college.getCutoff2021());
+            existingCollege.setCutoff2020(college.getCutoff2020());
+            existingCollege.setRating(college.getRating());
+            return collegeService.saveCollege(existingCollege);
+        }
+        return null;
+    }
 
-    // @GetMapping(path = "")
-    // List<CollegeDTO> findAll() {
-    //     return collegeRepo.findAll();
-    // }
-
-    // @GetMapping("/{location}")
-    // CollegeDTO findById(@PathVariable String location) {
-    //     Optional<CollegeDTO> college = collegeRepo.findByParams(location);;
-    //     if (college.isEmpty()) {
-    //         throw new CollegeNotFoundException();
-    //     }
-    //     return college.get();
-    // }
-
-    // @ResponseStatus(HttpStatus.CREATED)
-    // //post
-    // @PostMapping("/")
-    // void create(@Valid @RequestBody CollegeDTO college) {
-    //     collegeRepo.create(college);
-    // }
-
-    // @ResponseStatus(HttpStatus.NO_CONTENT)
-    // //put
-    // @PutMapping("/{id}")
-    // void update(@Valid @RequestBody CollegeDTO college, @PathVariable Integer id){
-    //     collegeRepo.update(college, id);
-    // }
-
-    // @ResponseStatus(HttpStatus.NO_CONTENT)
-    // @DeleteMapping("/{id}")
-    // void delete(@PathVariable Integer id){
-    //     collegeRepo.delete(id);
-    // }
-    
-// }
+    @DeleteMapping("/{id}")
+    public void deleteCollege(@PathVariable Long id) {
+        collegeService.deleteCollege(id);
+    }
+}

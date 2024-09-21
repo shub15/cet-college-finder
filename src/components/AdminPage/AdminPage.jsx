@@ -8,10 +8,10 @@ const AdminPage = () => {
                 <h1 className="text-xl font-bold mb-8">Admin Panel</h1>
                 <ul>
                     <li className="mb-4">
-                        <Link to="/admin" className="hover:text-gray-300">Add College</Link>
+                        <Link to="/admin/home" className="hover:text-gray-300">Add College</Link>
                     </li>
                     <li>
-                        <Link to="/admin/notifications" className="hover:text-gray-300">Add Notification</Link>
+                        <Link to="/admin/home/notifications" className="hover:text-gray-300">Add Notification</Link>
                     </li>
                 </ul>
             </div>

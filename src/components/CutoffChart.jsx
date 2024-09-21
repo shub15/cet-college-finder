@@ -86,13 +86,13 @@ const CutoffChart = () => {
             title: {
               display: true,
               text: 'Year',
-              color: '#32cd32',  // Change X-axis label color
+              color: 'blue',  // Change X-axis label color
               font: {
                 size: 16,  // Optional: Change X-axis font size
               },
             },
             ticks: {
-              color: '#32cd32',  // Change X-axis tick labels color
+              color: 'blue',  // Change X-axis tick labels color
               font: {
                 size: 14,  // Change tick font size
               },
@@ -126,7 +126,7 @@ const CutoffChart = () => {
       };
 
     return (
-        <div className="p-8 sm:mx-24 sm:px-24 bg-blue-100 shadow-md rounded-md">
+        <div className="p-8 shadow-md rounded-md">
             <Line data={data} options={options} />
         </div>
     );

@@ -137,18 +137,8 @@ export default function SearchCollege() {
                                     {" "}
                                     <option value={0}> All </option>
                                     <option value={22002}> Aeronautical Engineering</option>
-                                    <option value={22011}> Agricultural Engineering</option>
-                                    <option value={22012}> Agriculture Engineering</option>
-                                    <option value={22043}> Town and Country Planning</option>
                                     <option value={22082}> Bio Technology</option>
                                     <option value={22191}> Civil Engineering</option>
-                                    <option value={22192}>
-                                        {" "}
-                                        Civil Engineering (Construction Technology)
-                                    </option>
-                                    <option value={22195}> Civil and Water Management Engineering</option>
-                                    <option value={22201}> Environmental Engineering</option>
-                                    <option value={22214}> Environmental Science and Technology</option>
                                     <option value={22219}> Robotics and Automation</option>
                                     <option value={22242}> Computer Science and Engineering</option>
                                     <option value={22245}> Computer Engineering</option>
@@ -160,10 +150,6 @@ export default function SearchCollege() {
                                     <option value={22255}> Computer Science(IOT)</option>
                                     <option value={22256}> Computer Science(AI)</option>
                                     <option value={22257}> Computer Science and Design</option>
-                                    <option value={22258}>
-                                        {" "}
-                                        Civil Engineering with Computer Application
-                                    </option>
                                     <option value={22259}>
                                         {" "}
                                         Mechanical and Mechatronics Engineering (Additive Manufacturing)
@@ -233,10 +219,6 @@ export default function SearchCollege() {
                                     <option value={22508}> Plastic Technology</option>
                                     <option value={22510}> Plastic and Polymer Technology</option>
                                     <option value={22511}> Dyestuff Technology</option>
-                                    <option value={22512}>
-                                        {" "}
-                                        Oil,Oleochemicals and Surfactants Technology
-                                    </option>
                                     <option value={22513}>
                                         {" "}
                                         Pharmaceuticals Chemistry and Technology
@@ -270,7 +252,6 @@ export default function SearchCollege() {
                                         Computer Science and Information Technology
                                     </option>
                                     <option value={22569}> Electronics Technology</option>
-                                    <option value={22570}> Fashion Technology</option>
                                     <option value={22571}>
                                         {" "}
                                         Electrical and Electronics [Power System]
@@ -314,9 +295,7 @@ export default function SearchCollege() {
                                         {" "}
                                         Printing Engineering and Graphics Communication
                                     </option>
-                                    <option value={22843}> Printing Technology</option>
                                     <option value={22844}> Electronics and Computer Engineering</option>
-                                    <option value={22886}> Man Made Textile Technology</option>
                                     <option value={22890}> Textile Chemistry</option>
                                     <option value={22893}> Textile Engineering / Technology</option>
                                     <option value={22895}> Textile Plant Engineering</option>
@@ -344,7 +323,6 @@ export default function SearchCollege() {
                                         {" "}
                                         Computer Science and Engineering (Artificial Intelligence){" "}
                                     </option>
-                                    <option value={22914}> Safety and Fire Engineering</option>
                                     <option value={22915}> Structural Engineering</option>
                                     <option value={22916}> Automation and Robotics</option>
                                     <option value={22917}> Data Science</option>
@@ -376,7 +354,6 @@ export default function SearchCollege() {
                                         Electronics and Communication(Advanced Communication Technology)
                                     </option>
                                     <option value={22929}> VLSI</option>
-                                    <option value={22930}> Logistics</option>
                                     <option value={22931}>
                                         {" "}
                                         Computer Science and Engineering (Data Science?and?Analytics)
@@ -388,16 +365,12 @@ export default function SearchCollege() {
                                     </option>
                                     <option value={22934}> Civil Engineering and Planning</option>
                                     <option value={22935}> Electronics and Biomedical?Engineering</option>
-                                    <option value={22936}> Fire Engineering</option>
                                     <option value={22994}> Robotics</option>
                                     <option value={22995}>
                                         {" "}
                                         Artificial Intelligence and Data Science
                                     </option>
-                                    <option value={22996}> Design</option>
                                     <option value={22997}> Artificial Intelligence</option>
-                                    <option value={22998}> B.Planning</option>
-                                    <option value={22999}> B.Tech Planning</option>0
                                 </select> */}
                                 <br />
                                 <br />

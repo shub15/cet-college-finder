@@ -61,8 +61,8 @@ export default function CollegeList() {
             </table> */}
             <div className='mt-6 ml-6'>
                 <select name="" id="" onClick={(e) => setFilter(e.target.value)} className='outline bg-slate-200 outline-cyan-500 rounded-md px-4 py-2'>
+                    <option value="Name" selected>Name</option>
                     <option value="Branch">Branch</option>
-                    <option value="Name">Name</option>
                 </select>
             </div>
             {console.log(filter)}
@@ -70,7 +70,7 @@ export default function CollegeList() {
                 <img src={Search} alt="search" className='absolute size-6 ml-4' />
                 <input type="search" name="search_location" id="1" className='bg-slate-200 px-12 py-2 w-full outline-cyan-500 rounded-full focus:bg-blue-100' placeholder='Search computer engineering' onChange={(e) => setSearch(e.target.value.toLowerCase())} />
             </div>
-            <div className='flex justify-end mr-6'>
+            <div className='flex justify-end mr-6 mb-6'>
                 <button type="button" value="" className='bg-blue-900 text-white rounded-full px-4 py-2' onClick={() => setExpandAll(!expandAll)}>Expand All</button>
             </div>
             {console.log(expandAll)}
