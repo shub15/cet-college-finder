@@ -13,6 +13,8 @@ function CollegeForm() {
     cutoff2021: '',
     cutoff2020: ''
   });
+  
+  const [success, setSuccess] = useState(false); // New state for success message
 
   // Handle input changes
   const handleChange = (e) => {
@@ -26,13 +28,14 @@ function CollegeForm() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Optional: Add validation here
+    setSuccess(false); // Reset success state on new submission
 
     // Submit form data to the backend
-    axios.post('http://localhost:8080/api/colleges', formData)
+    axios.post('/api/colleges', formData)
       .then(response => {
         console.log('College data submitted successfully', response.data);
+        setSuccess(true); // Set success to true on successful submission
+
         // Optionally reset the form after submission
         setFormData({
           name: '',
@@ -54,8 +57,15 @@ function CollegeForm() {
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-2xl font-bold mb-4">Add New College</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      
+      {/* Success Message */}
+      {success && (
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+          <span className="block sm:inline">College data submitted successfully!</span>
+        </div>
+      )}
 
+      <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name */}
         <div>
           <label className="block text-sm font-medium">College Name</label>

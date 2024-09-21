@@ -73,9 +73,9 @@ const AboutUs = () => {
                         <div className="bg-white shadow-md p-6 rounded-lg text-center">
                             <img src="https://via.placeholder.com/150" alt="Team Member" className="w-32 h-32 mx-auto rounded-full mb-4" />
                             <h3 className="text-xl font-semibold text-gray-800">Vatsal Umrania</h3>
-                            <p className="text-blue-600">DBMS</p>
+                            <p className="text-blue-600">Member</p>
                             <p className="text-gray-600 mt-2">
-                                Handles our Database.
+                                Data Survey.
                             </p>
                         </div>
 
