@@ -2,9 +2,9 @@ import React from 'react';
 
 function CollegeCard({ college }) {
   return (
-    <div className="border rounded-lg p-4 shadow-md">
+    <div className="">
       <h2 className="text-blue-900 text-2xl font-bold">{college.name}</h2>
-      <p className="text-gray-600">{college.location}</p>
+      <p className="text-yellow-600 font-semibold text-lg">{college.location}</p>
       <p>Branch: {college.branch}</p>
       <p>Type: {college.collegeType}</p>
       <p>Cutoff 2023: {college.cutoff2023 !== null ? college.cutoff2023 : 'N/A'}</p>

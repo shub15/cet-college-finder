@@ -1,16 +1,98 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CollegeCard from './CollegeCard';
+import axios from 'axios';
 
 function CollegeList({ colleges }) {
-  if (colleges.length === 0) {
-    return <p className="text-center">No colleges found.</p>;
-  }
+  // if (colleges.length === 0) {
+  //   return <p className="text-center">No colleges found.</p>;
+  // }
+
+  const [selectedColleges, setSelectedColleges] = useState([]); // To store selected colleges
+  const [successMessage, setSuccessMessage] = useState(''); // For displaying success messages
+
+  // Handle selecting a college
+  const handleSelectCollege = (college) => {
+    if (selectedColleges.some(item => item.id === college.id)) {
+      // Remove the college if it's already selected
+      setSelectedColleges(selectedColleges.filter(item => item.id !== college.id));
+    } else {
+      // Add the selected college
+      setSelectedColleges([...selectedColleges, college]);
+    }
+  };
+
+  // Handle saving the custom list of colleges
+  const handleSaveList = () => {
+    const token = localStorage.getItem('auth'); // Get user token from local storage
+
+    if (!token) {
+      alert("Please sign in to save your custom list.");
+      return;
+    }
+
+    // Extract only the college IDs from the selectedColleges array
+    const collegeIds = selectedColleges.map(college => college.id);
+
+    axios.post('http://localhost:8080/api/user/college-list', collegeIds, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    })
+      .then(response => {
+        console.log('Custom list saved successfully', response.data);
+        setSuccessMessage(response.data); // Set the success message
+      })
+      .catch(error => {
+        console.error('Error saving custom list:', error);
+      });
+  };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {colleges.map(college => (
-        <CollegeCard key={college.id} college={college} />
-      ))}
+    // <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    //   {colleges.map(college => (
+    //     <CollegeCard key={college.id} college={college} />
+    //   ))}
+    // </div>
+    <div className="container mx-auto">
+      <div className='flex justify-between'>
+        <h1 className="text-2xl font-bold mb-4">Select Your Favorite Colleges</h1>
+        <button
+          onClick={handleSaveList}
+          className=" bg-rose-800 text-white px-6 py-3 mb-4 rounded"
+        >
+          Save Custom List
+        </button>
+      </div>
+
+      {successMessage && (
+        <div className="bg-green-800 text-white p-4 rounded mb-4">
+          {successMessage}
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {colleges.map(college => (
+          <div
+            key={college.id}
+            className={`border p-4 rounded ${selectedColleges.some(item => item.id === college.id) ? 'bg-blue-100' : 'bg-white'}`}
+          >
+            <CollegeCard key={college.id} college={college} />
+            <button
+              onClick={() => handleSelectCollege(college)}
+              className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
+            >
+              {selectedColleges.some(item => item.id === college.id) ? 'Remove from List' : 'Add to List'}
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <button
+        onClick={handleSaveList}
+        className="mt-6 bg-rose-800 text-white px-6 py-3 rounded"
+      >
+        Save Custom List
+      </button>
     </div>
   );
 }

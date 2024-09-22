@@ -8,7 +8,7 @@ const AboutUs = () => {
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl font-bold mb-4">About Us</h1>
                     <p className="text-lg max-w-2xl mx-auto">
-                        We are committed to empowering students and professionals through AI and data science. Our mission is to foster innovation and research that addresses global challenges.
+                        CETCollegeFinder is your ultimate tool for navigating the complex process of college admissions in Maharashtra. Designed specifically for students who have taken the CET exam, our platform helps you identify the best colleges based on your scores, reservation status, and other personalized criteria.
                     </p>
                 </div>
             </section>
@@ -20,7 +20,7 @@ const AboutUs = () => {
                     <div className="bg-white shadow-md p-8 rounded-lg">
                         <h2 className="text-2xl font-semibold mb-4 text-blue-600">Our Mission</h2>
                         <p className="text-gray-600">
-                            Our mission is to cultivate a learning environment where innovation in AI and Data Science thrives. We aim to provide students and researchers with the tools and knowledge needed to tackle real-world challenges.
+                            Our mission is to help students to find the college based on their interest and carrier they want to pursue in. 
                         </p>
                     </div>
 
@@ -28,7 +28,7 @@ const AboutUs = () => {
                     <div className="bg-white shadow-md p-8 rounded-lg">
                         <h2 className="text-2xl font-semibold mb-4 text-blue-600">Our Vision</h2>
                         <p className="text-gray-600">
-                            We envision a world where technology drives positive change, and AI solutions are accessible to everyone. Our vision is to lead the way in shaping a future driven by ethical and innovative AI technologies.
+                            "Unlock Your Future: Find the Perfect College with CETCollegeFinder"
                         </p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ const AboutUs = () => {
                 <div className="container mx-auto text-center">
                     <h2 className="text-3xl font-semibold text-blue-600 mb-8">Our History</h2>
                     <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Founded in 2020, our organization started with the belief that AI and data science could transform industries and solve some of the world’s toughest challenges. Over the years, we’ve grown into a community of innovators, researchers, and professionals working to push the boundaries of technology.
+                       We are the team of three from 2nd Year IT department.
                     </p>
                 </div>
             </section>
@@ -63,9 +63,9 @@ const AboutUs = () => {
                         <div className="bg-white shadow-md p-6 rounded-lg text-center">
                             <img src="https://via.placeholder.com/150" alt="Team Member" className="w-32 h-32 mx-auto rounded-full mb-4" />
                             <h3 className="text-xl font-semibold text-gray-800">Shubham Maity</h3>
-                            <p className="text-blue-600">Tech Lead</p>
+                            <p className="text-blue-600">Project Lead</p>
                             <p className="text-gray-600 mt-2">
-                                Leads our frontend and backend.
+                                Frontend and backend.
                             </p>
                         </div>
 

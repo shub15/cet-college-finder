@@ -4,13 +4,18 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cetcollegefinder.app.dto.College;
 import com.cetcollegefinder.app.dto.UserDTO;
+import com.cetcollegefinder.app.repositories.CollegeRepository;
 import com.cetcollegefinder.app.repositories.UserRepo;
 
 @Service
 public class UserService {
     @Autowired
     private UserRepo userRepo;
+
+    @Autowired
+    private CollegeRepository collegeRepository;
 
     public UserDTO saveUserDTO(UserDTO user) {
         return userRepo.save(user);
@@ -20,7 +25,7 @@ public class UserService {
         return userRepo.findAll();
     }
 
-    public UserDTO getUserById(int id) {
+    public UserDTO getUserById(Long id) {
         return userRepo.findById(id).orElse(null);
     }
 
@@ -38,12 +43,12 @@ public class UserService {
             String existingUserPassword = existingUser.getPassword();
             String userPassword = user.getPassword();
             return userPassword.equals(existingUserPassword);
-        } else{
+        } else {
             return false;
         }
     }
 
-    public String deleteUser(int id) {
+    public String deleteUser(Long id) {
         userRepo.deleteById(id);
         return "User Deleted" + id;
     }
@@ -55,6 +60,21 @@ public class UserService {
         existingUser.setPassword(user.getPassword());
 
         return userRepo.save(existingUser);
+    }
+
+    public void saveCustomCollegeList(String username, List<Long> collegeIds) {
+        UserDTO user = userRepo.findByUsername(username);
+
+        List<College> colleges = collegeRepository.findAllById(collegeIds);
+        user.setFavoriteColleges(colleges);
+
+        userRepo.save(user);
+    }
+
+    public List<College> getUserFavoriteColleges(String username) {
+        UserDTO user = userRepo.findByUsername(username);
+
+        return user.getFavoriteColleges();
     }
 
 }

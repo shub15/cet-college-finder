@@ -31,7 +31,7 @@ function CollegeForm() {
     setSuccess(false); // Reset success state on new submission
 
     // Submit form data to the backend
-    axios.post('/api/colleges', formData)
+    axios.post('http://localhost:8080/api/colleges', formData)
       .then(response => {
         console.log('College data submitted successfully', response.data);
         setSuccess(true); // Set success to true on successful submission
