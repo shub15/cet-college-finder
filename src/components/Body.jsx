@@ -12,7 +12,7 @@ export default function Body() {
           This website can help to find best college
         </p>
         <div>
-          <Link to="/search">
+          <Link to="/colleges">
             <button className='px-6 py-4 text-center text-white font-semibold bg-blue-900 rounded-lg'>Search Colleges</button>
           </Link>
         </div>

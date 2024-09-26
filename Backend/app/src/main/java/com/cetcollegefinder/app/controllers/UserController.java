@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 //operations
 //GET /colleges
@@ -22,11 +23,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
+@RequestMapping("/api/user")
 public class UserController {
     @Autowired
     private UserService service;
 
-    @PostMapping("/adduser")
+    @PostMapping("/add")
     public UserDTO addUser(@RequestBody UserDTO user) {
         return service.saveUserDTO(user);
     }
@@ -35,7 +37,7 @@ public class UserController {
         return service.getUsers();
     }
 
-    @GetMapping("/userbyid/{id}")
+    @GetMapping("/{id}")
     public UserDTO findUserById(@PathVariable Long id) {
         return service.getUserById(id);
     }

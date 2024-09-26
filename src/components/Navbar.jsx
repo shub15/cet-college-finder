@@ -1,12 +1,13 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { AuthContext } from './AuthContext'
 
 const navigation = [
     { name: 'Search College', href: '/', current: true },
     { name: 'Form', href: '/form', current: false },
-    { name: 'College List', href: '/colleges', current: false },
-    { name: 'Admin', href: '/admin', current: false }
+    { name: 'Admin', href: '/admin/login', current: false }
 ]
 
 function classNames(...classes) {
@@ -14,6 +15,8 @@ function classNames(...classes) {
 }
 
 export default function Navbar(props) {
+    const { detail } = useContext(AuthContext)
+
     return (
         <Disclosure as="nav" className="bg-gray-800">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -65,20 +68,15 @@ export default function Navbar(props) {
                                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                             >
                                 <MenuItem>
-                                    <NavLink to="/login" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                                        {props.email ? "Your Profile" : "Login"}
+                                    <NavLink to={detail ? "/dashboard" : "/login"} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                                        {detail ? "Your Profile" : "Login"}
                                     </NavLink>
                                 </MenuItem>
-                                <MenuItem>
-                                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                                        Settings
-                                    </a>
-                                </MenuItem>
-                                <MenuItem>
-                                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                                {detail && (<MenuItem>
+                                    <Link to="/logout" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                                         Sign out
-                                    </a>
-                                </MenuItem>
+                                    </Link>
+                                </MenuItem>)}
                             </MenuItems>
                         </Menu>
                     </div>

@@ -2,6 +2,7 @@ package com.cetcollegefinder.app.services;
 
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.cetcollegefinder.app.dto.College;
@@ -63,7 +64,7 @@ public class UserService {
     }
 
     public void saveCustomCollegeList(String username, List<Long> collegeIds) {
-        UserDTO user = userRepo.findByUsername(username);
+        UserDTO user = userRepo.findByEmail(username);
 
         List<College> colleges = collegeRepository.findAllById(collegeIds);
         user.setFavoriteColleges(colleges);
@@ -72,8 +73,10 @@ public class UserService {
     }
 
     public List<College> getUserFavoriteColleges(String username) {
-        UserDTO user = userRepo.findByUsername(username);
-
+        UserDTO user = userRepo.findByEmail(username);
+        if (user == null) {
+            System.out.println("User details are required.");
+        }
         return user.getFavoriteColleges();
     }
 

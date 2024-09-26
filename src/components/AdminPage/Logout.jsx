@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../AuthContext';
 
 const Logout = () => {
+  const { addDetail } = useContext(AuthContext)
   const navigate = useNavigate();
 
   const handleLogout = () => {
     // Clear authentication flag
     localStorage.removeItem('auth');
-    navigate('/admin');
+    addDetail(null);
+    navigate('/admin/login');
   };
 
   return (

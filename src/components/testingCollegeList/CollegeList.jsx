@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import CollegeCard from './CollegeCard';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../AuthContext';
+
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 function CollegeList({ colleges }) {
+  const { detail } = useContext(AuthContext)
+  const navigate = useNavigate();
   // if (colleges.length === 0) {
   //   return <p className="text-center">No colleges found.</p>;
   // }
@@ -24,19 +30,26 @@ function CollegeList({ colleges }) {
   // Handle saving the custom list of colleges
   const handleSaveList = () => {
     const token = localStorage.getItem('auth'); // Get user token from local storage
+    console.log(detail)
+    console.log(token)
 
     if (!token) {
       alert("Please sign in to save your custom list.");
+      navigate("/login");
       return;
     }
 
     // Extract only the college IDs from the selectedColleges array
     const collegeIds = selectedColleges.map(college => college.id);
 
-    axios.post('http://localhost:8080/api/user/college-list', collegeIds, {
+    axios.post(`${API_URL}/api/user/college-list`,
+      {
+        collegeIds: collegeIds,
+        email: detail
+      }, {
       headers: {
-        Authorization: `Bearer ${token}`,
-      }
+        'Content-Type': 'application/json',
+      },
     })
       .then(response => {
         console.log('Custom list saved successfully', response.data);

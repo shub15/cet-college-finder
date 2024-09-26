@@ -20,6 +20,7 @@ import AdminLogin from './components/AdminPage/AdminLogin.jsx';
 import College from './components/testingCollegeList/College.jsx';
 import Admin from './components/AdminPage/Admin.jsx';
 import PrivateRoute from './components/AdminPage/PrivateRoute.jsx';
+import LogoutPage from './components/Logout.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         element: <Login />
       },
       {
+        path: "/logout",
+        element: <LogoutPage />
+      },
+      {
         path: "/signup",
         element: <Signup />
       },
@@ -60,19 +65,19 @@ const router = createBrowserRouter([
         element: <Dashboard />
       },
       {
-        path: "/admin",
+        path: "/admin/login",
         element: <AdminLogin />
       },
       {
-        path: "/admin/home",
+        path: "/admin",
         element: <PrivateRoute><Admin /></PrivateRoute>,
         children: [
           {
-            path: "/admin/home",
+            path: "",
             element: <CollegeForm />
           },
           {
-            path: "/admin/home/notifications",
+            path: "notifications",
             element: <NotificationForm />
           }
         ]

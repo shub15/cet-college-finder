@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cetcollegefinder.app.dto.College;
+import com.cetcollegefinder.app.dto.UserCustomCollegeList;
 import com.cetcollegefinder.app.dto.UserDTO;
 import com.cetcollegefinder.app.services.UserService;
 
@@ -24,15 +25,19 @@ public class UserCustomListController {
     private UserService userService;
 
     @PostMapping("/college-list")
-    public ResponseEntity<?> saveCustomCollegeList(@RequestBody List<Long> collegeIds, UserDTO userDetails) {
-        String username = userDetails.getUsername();
+    public ResponseEntity<?> saveCustomCollegeList(@RequestBody UserCustomCollegeList userDetails) {
+        List<Long> collegeIds = userDetails.getCollegeIds();
+        String username = userDetails.getEmail();
+        if (username == null) {
+            return ResponseEntity.badRequest().body("User details are required.");
+        }
         userService.saveCustomCollegeList(username, collegeIds);
         return ResponseEntity.ok("Custom college list saved!");
     }
 
-    @GetMapping("/college-list")
-    public List<College> getUserCollegeList(UserDTO userDetails) {
-        String username = userDetails.getUsername();
+    @PostMapping("/my-college-list")
+    public List<College> getUserCollegeList(@RequestBody UserDTO userDetails) {
+        String username = userDetails.getEmail();
         return userService.getUserFavoriteColleges(username);
     }
 }

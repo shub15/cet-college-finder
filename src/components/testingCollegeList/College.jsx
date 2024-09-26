@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CollegeList from './CollegeList';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+console.log('API_URL:', API_URL);
+
 // The list of locations for the filter (removing duplicates)
 const LOCATIONS = [
   "Matunga", "Andheri", "Vile Parle", "Bandra", "Chembur", "Sion", "Vashi", "Wadala",
@@ -22,7 +25,7 @@ function College() {
 
   // Fetch college data from the backend
   useEffect(() => {
-    axios.get('http://localhost:8080/api/colleges')
+    axios.get(`${API_URL}/api/colleges`)
       .then(response => {
         setColleges(response.data);
       })

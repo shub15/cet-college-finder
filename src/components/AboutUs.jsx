@@ -8,7 +8,7 @@ const AboutUs = () => {
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl font-bold mb-4">About Us</h1>
                     <p className="text-lg max-w-2xl mx-auto">
-                        CETCollegeFinder is your ultimate tool for navigating the complex process of college admissions in Maharashtra. Designed specifically for students who have taken the CET exam, our platform helps you identify the best colleges based on your scores, reservation status, and other personalized criteria.
+                        CET College Finder is your ultimate tool for navigating the complex process of college admissions in Maharashtra. Designed specifically for students who have taken the CET exam, our platform helps you identify the best colleges based on your scores, reservation status, and other personalized criteria.
                     </p>
                 </div>
             </section>

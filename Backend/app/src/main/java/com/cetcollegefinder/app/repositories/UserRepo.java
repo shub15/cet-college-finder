@@ -9,6 +9,4 @@ public interface UserRepo extends JpaRepository<UserDTO, Long> {
     UserDTO findByName(String name);
 
     UserDTO findByEmail(String email);
-
-    UserDTO findByUsername(String username);
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 const AdminLogin = () => {
   const [email, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +14,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/auth', {
+      const response = await fetch(`${API_URL}/api/user/auth`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -20,12 +22,12 @@ const AdminLogin = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      const authenticated  = await response.json(); // Expecting true or false from backend
+      const authenticated = await response.json(); // Expecting true or false from backend
 
       if (authenticated) {
         // Store authentication flag in localStorage or sessionStorage
         localStorage.setItem('auth', 'true');
-        navigate('/admin/home');  // Redirect to admin page after successful login
+        navigate('/admin');  // Redirect to admin page after successful login
       } else {
         setError('Invalid credentials. Please try again.');
       }
@@ -42,8 +44,9 @@ const AdminLogin = () => {
         {error && <p className="text-red-600 mb-4">{error}</p>}
 
         <input
+          id='email'
           type="email"
-          placeholder="Username"
+          placeholder="Email"
           value={email}
           onChange={(e) => setUsername(e.target.value)}
           className="mb-4 p-2 w-full border rounded"

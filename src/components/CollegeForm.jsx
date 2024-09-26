@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 function CollegeForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -31,7 +33,7 @@ function CollegeForm() {
     setSuccess(false); // Reset success state on new submission
 
     // Submit form data to the backend
-    axios.post('http://localhost:8080/api/colleges', formData)
+    axios.post(`${API_URL}/api/colleges`, formData)
       .then(response => {
         console.log('College data submitted successfully', response.data);
         setSuccess(true); // Set success to true on successful submission
