@@ -22,6 +22,7 @@ function College() {
   const [searchQuery, setSearchQuery] = useState('');
   const [locationFilter, setLocationFilter] = useState('');
   const [cutoffFilter, setCutoffFilter] = useState('');
+  console.log(colleges);
 
   // Fetch college data from the backend
   useEffect(() => {

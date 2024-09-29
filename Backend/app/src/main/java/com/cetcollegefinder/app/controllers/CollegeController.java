@@ -1,6 +1,7 @@
 package com.cetcollegefinder.app.controllers;
 
 import com.cetcollegefinder.app.dto.College;
+import com.cetcollegefinder.app.dto.CollegeBranch;
 import com.cetcollegefinder.app.services.CollegeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ public class CollegeController {
     @Autowired
     private CollegeService collegeService;
 
+    // Existing college operations
     @GetMapping
     public List<College> getAllColleges() {
         return collegeService.getAllColleges();
@@ -36,15 +38,11 @@ public class CollegeController {
         if (existingCollege != null) {
             existingCollege.setName(college.getName());
             existingCollege.setLocation(college.getLocation());
-            existingCollege.setBranch(college.getBranch());
             existingCollege.setWebsite(college.getWebsite());
             existingCollege.setDescription(college.getDescription());
             existingCollege.setCollegeType(college.getCollegeType());
-            existingCollege.setCutoff2023(college.getCutoff2023());
-            existingCollege.setCutoff2022(college.getCutoff2022());
-            existingCollege.setCutoff2021(college.getCutoff2021());
-            existingCollege.setCutoff2020(college.getCutoff2020());
             existingCollege.setRating(college.getRating());
+            existingCollege.setBranches(college.getBranches());
             return collegeService.saveCollege(existingCollege);
         }
         return null;
@@ -53,5 +51,22 @@ public class CollegeController {
     @DeleteMapping("/{id}")
     public void deleteCollege(@PathVariable Long id) {
         collegeService.deleteCollege(id);
+    }
+
+    // New endpoints for branch and cutoff management
+
+    @PostMapping("/{collegeId}/branches")
+    public CollegeBranch createBranchForCollege(@PathVariable Long collegeId, @RequestBody CollegeBranch collegeBranch) {
+        return collegeService.saveCollegeBranch(collegeId, collegeBranch);
+    }
+
+    // @PutMapping("/{collegeId}/branches/{branchId}")
+    // public CollegeBranch updateBranchForCollege(@PathVariable Long collegeId, @PathVariable Long branchId, @RequestBody CollegeBranch updatedBranch) {
+    //     return collegeService.updateCollegeBranch(collegeId, branchId, updatedBranch);
+    // }
+
+    @DeleteMapping("/{collegeId}/branches/{branchId}")
+    public void deleteBranchForCollege(@PathVariable Long collegeId, @PathVariable Long branchId) {
+        collegeService.deleteCollegeBranch(collegeId, branchId);
     }
 }
