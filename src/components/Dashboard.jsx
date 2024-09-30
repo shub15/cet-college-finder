@@ -36,7 +36,7 @@ function Dashboard() {
   if (loading) {
     return <p className="text-center my-10">Loading...</p>;
   }
-
+  console.log(colleges)
   //   if (error) {
   //     return <p className="text-center text-red-500 mt-10">{error}</p>;
   //   }

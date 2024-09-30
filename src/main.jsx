@@ -21,6 +21,7 @@ import College from './components/testingCollegeList/College.jsx';
 import Admin from './components/AdminPage/Admin.jsx';
 import PrivateRoute from './components/AdminPage/PrivateRoute.jsx';
 import LogoutPage from './components/Logout.jsx';
+import CollegeDetails from './components/CollegeDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/colleges",
         element: <College />
+      },
+      {
+        path: "/collegedetails",
+        element: <CollegeDetails />
       },
       {
         path: "/login",

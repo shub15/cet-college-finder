@@ -57,7 +57,13 @@ function CollegeList({ colleges }) {
       })
       .catch(error => {
         console.error('Error saving custom list:', error);
+        alert("Please sign in to save your custom list.");
+        navigate("/login");
       });
+  };
+  // Handle navigation to CollegeDetails with state
+  const handleCollegeDetails = (college) => {
+    navigate('/collegedetails', { state: { college } });
   };
 
   return (
@@ -90,12 +96,15 @@ function CollegeList({ colleges }) {
             className={`border p-4 rounded ${selectedColleges.some(item => item.id === college.id) ? 'bg-blue-100' : 'bg-white'}`}
           >
             <CollegeCard key={college.id} college={college} />
-            <button
-              onClick={() => handleSelectCollege(college)}
-              className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
-            >
-              {selectedColleges.some(item => item.id === college.id) ? 'Remove from List' : 'Add to List'}
-            </button>
+            <div>
+              <button
+                onClick={() => handleSelectCollege(college)}
+                className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
+              >
+                {selectedColleges.some(item => item.id === college.id) ? 'Remove from List' : 'Add to List'}
+              </button>
+              <button onClick={() => handleCollegeDetails(college)} className='mt-2 ml-2 bg-blue-500 text-white px-4 py-2 rounded'>See details</button>
+            </div>
           </div>
         ))}
       </div>
