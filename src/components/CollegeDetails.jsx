@@ -26,40 +26,27 @@ const CollegeDetails = () => {
     //         topCompanies: ['Google', 'Microsoft', 'Infosys'],
     //     },
     // };
+    const categoryName = ["ID", "Open Rank", "Open Percentile", "TFWS Rank", "TFWS Percentile", "OBC Rank", "OBC Percentile", "MI Rank", "MI Percentile", "EWS Rank", "EWS Percentile"];
     const location = useLocation();
-    const details = location.state;
-    const college = details.college
-    console.log(college)
-
+    const college = location.state;  // Access passed college details
+    const details = college.college;
+    // Example data structure using details passed from the previous component
     const collegeData = {
-        name: college.name,
-        location: college.location,
-        description: college.description || 'A premier institution offering courses in engineering, science, and technology.',
-        feeStructure: {
-            undergraduate: '₹ 1,95,000 per year',
-            postgraduate: '₹ 50,000 per year',
-        },
-        cutoffs: {
-            Open: '90%',
-            OBC: '85%',
-            SC: '75%',
-            ST: '65%',
-        },
-        reviews: [
-            { name: 'John Doe', review: 'Great campus and facilities!' },
-            { name: 'Jane Smith', review: 'Excellent faculty and environment.' },
-        ],
-        statistics: {
-            placements: '85%',
-            avgSalary: '₹ 7 LPA',
-            topCompanies: ['Google', 'Microsoft', 'Infosys'],
-        },
+        name: details.name,
+        location: details.location,
+        website: details.website || 'N/A',
+        description: details.description || 'A premier institution offering various branches of engineering.',
+        branches: details.branches || [],
     };
 
     return (
         <div className="container mx-auto p-6">
+            {/* College Name */}
             <h1 className="text-4xl font-bold text-blue-600 mb-4">{collegeData.name}</h1>
-            <p className="text-gray-500 text-xl">{collegeData.location}</p>
+
+            {/* College Location and Website */}
+            <p className="text-gray-500 text-xl">Location: {collegeData.location}</p>
+            <p className="text-gray-500 text-xl">Website: <a href={`https://${collegeData.website}`} className="text-blue-500 underline">{collegeData.website}</a></p>
 
             {/* Description Section */}
             <section className="my-6">
@@ -67,69 +54,27 @@ const CollegeDetails = () => {
                 <p className="text-gray-700">{collegeData.description}</p>
             </section>
 
-            {/* Fee Structure */}
+            {/* Branches and Cutoffs */}
             <section className="my-6">
-                <h2 className="text-2xl font-semibold mb-2">Fee Structure</h2>
-                <table className="table-auto w-full text-left">
-                    <thead>
-                        <tr>
-                            <th className="px-4 py-2">Course</th>
-                            <th className="px-4 py-2">Fee</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td className="border px-4 py-2">Undergraduate</td>
-                            <td className="border px-4 py-2">{collegeData.feeStructure.undergraduate}</td>
-                        </tr>
-                        <tr>
-                            <td className="border px-4 py-2">Postgraduate</td>
-                            <td className="border px-4 py-2">{collegeData.feeStructure.postgraduate}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            {/* Cutoffs */}
-            <section className="my-6">
-                <h2 className="text-2xl font-semibold mb-2">Cutoffs</h2>
-                <ul className="list-disc list-inside">
-                    {Object.entries(collegeData.cutoffs).map(([category, cutoff]) => (
-                        <li key={category} className="text-gray-700">
-                            {category}: {cutoff}
-                        </li>
-                    ))}
-                </ul>
-            </section>
-
-            {/* Branchs */}
-            <section className="my-6">
-                <h2 className="text-2xl font-semibold mb-2">Cutoffs</h2>
-
-                {college.branches.map(([branch, branchName]) => (
-                    <ul className="list-disc list-inside">
-                        {branch}
-                    </ul>
-                ))}
-            </section>
-
-            {/* Reviews */}
-            <section className="my-6">
-                <h2 className="text-2xl font-semibold mb-2">Reviews</h2>
-                {collegeData.reviews.map((review, index) => (
-                    <div key={index} className="border p-4 rounded-lg mb-2 bg-gray-50">
-                        <p className="font-semibold">{review.name}</p>
-                        <p className="text-gray-700">{review.review}</p>
-                    </div>
-                ))}
-            </section>
-
-            {/* Statistical Analysis */}
-            <section className="my-6">
-                <h2 className="text-2xl font-semibold mb-2">Statistical Analysis</h2>
-                <p><strong>Placements:</strong> {collegeData.statistics.placements}</p>
-                <p><strong>Average Salary:</strong> {collegeData.statistics.avgSalary}</p>
-                <p><strong>Top Companies:</strong> {collegeData.statistics.topCompanies.join(', ')}</p>
+                <h2 className="text-2xl font-semibold mb-2">Branches and Cutoffs</h2>
+                {collegeData.branches.length > 0 ? (
+                    <ol className="list-decimal">
+                        {collegeData.branches.map((branch) => (
+                            <li key={branch.collegeBranchId} className="my-4">
+                                <h3 className="font-semibold">{branch.branchName}</h3>
+                                <ul className="list-disc list-inside ml-6">
+                                    {Object.entries(branch.cutoffCategories).map(([category, cutoff], index) => (
+                                        index > 0 && (<li key={category}>
+                                            {categoryName[index]}: {categoryName[index].includes("Rank") ? cutoff : `${cutoff}%`}
+                                        </li>)
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ol>
+                ) : (
+                    <p className="text-gray-700">No branches available.</p>
+                )}
             </section>
         </div>
     );

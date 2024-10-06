@@ -22,6 +22,7 @@ import Admin from './components/AdminPage/Admin.jsx';
 import PrivateRoute from './components/AdminPage/PrivateRoute.jsx';
 import LogoutPage from './components/Logout.jsx';
 import CollegeDetails from './components/CollegeDetails.jsx';
+import LoginDark from './components/LoginDark.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />
+        element: <LoginDark />
       },
       {
         path: "/logout",

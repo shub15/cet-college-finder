@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
+import DashboardUserDetails from './DashboardUserDetails';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
 
@@ -43,6 +44,7 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-8">
+      <DashboardUserDetails />
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold mb-8 text-center">Your Preferred Colleges</h1>
         {colleges.length > 0 ? (
