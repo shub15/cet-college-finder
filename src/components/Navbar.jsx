@@ -3,6 +3,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useContext, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AuthContext } from './AuthContext'
+import { DarkModeContext } from './DarkModeContext'
 
 const navigation = [
     { name: 'Search College', href: '/', current: true },
@@ -16,6 +17,7 @@ function classNames(...classes) {
 
 export default function Navbar(props) {
     const { detail } = useContext(AuthContext)
+    const { dark, setDarkMode } = useContext(DarkModeContext)
 
     return (
         <Disclosure as="nav" className="bg-gray-800">
@@ -54,7 +56,23 @@ export default function Navbar(props) {
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-                        <div>Dark Mode</div>
+                        <link
+                            rel="stylesheet"
+                            href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css"
+                        />
+                        <label htmlFor="toggle-example" className="flex items-center cursor-pointer relative mr-4">
+                            <input
+                                type="checkbox"
+                                id="toggle-example"
+                                className="sr-only"
+                                onChange={() => setDarkMode(!dark)}
+                                checked={dark} // Make sure the checkbox reflects the current state
+                            />
+                            <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full" />
+                            <span className={`ml-3 text-white text-sm font-medium`}>
+                                Dark Mode
+                            </span>
+                        </label>
                         {/* Profile dropdown */}
                         <Menu as="div" className="relative ml-3">
                             <div>

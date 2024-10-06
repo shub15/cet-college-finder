@@ -1,21 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthContext';
-import DarkModeToggle from './DarkModeToggle';
+import { DarkModeContext } from './DarkModeContext';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
 
-export default function LoginDark({ mode }) {
-    const [dark, setDark] = useState(false)
+export default function LoginDark() {
+    const { dark } = useContext(DarkModeContext);
     const { addDetail } = useContext(AuthContext);  // Get the addDetail function
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
-
-    // useEffect(() => {
-    //     setDark(true)
-    // }, [mode])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -46,18 +42,6 @@ export default function LoginDark({ mode }) {
 
     return (
         <div className={`${dark ? "bg-black text-white" : "bg-white text-black"} flex min-h-screen flex-col items-center pt-16 sm:justify-center sm:pt-0`}>
-            <link
-                rel="stylesheet"
-                href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css"
-            />
-            <label
-                htmlFor="toggle-example"
-                className="flex cursor-pointer relative mb-4"
-            >
-                <input type="checkbox" id="toggle-example" className="sr-only" onChange={()=>(setDark(!dark))}/>
-                <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full" />
-                <span className={`ml-3 ${dark?"text-white":"text-gray-900"} text-sm font-medium`}>Dark Mode</span>
-            </label>
             <Link to="/">
                 <div className="text-foreground font-semibold text-2xl tracking-tighter mx-auto flex items-center gap-2">
                     <div>
@@ -84,12 +68,12 @@ export default function LoginDark({ mode }) {
                     className="relative -mb-px h-px w-full bg-gradient-to-r from-transparent via-sky-300 to-transparent"
                     bis_skin_checked={1}
                 />
-                <div className="mx-5 border dark:border-b-white/50 dark:border-t-white/50 border-b-white/20 sm:border-t-white/20 shadow-[20px_0_20px_20px] shadow-slate-500/10 dark:shadow-white/20 rounded-lg border-white/20 border-l-white/20 border-r-white/20 sm:shadow-sm lg:rounded-xl lg:shadow-none">
+                <div className={`mx-5 border ${dark ? "" : "bg-gray-100 text-black"} dark:border-b-white/50 dark:border-t-white/50 border-b-white/20 sm:border-t-white/20 shadow-[20px_0_20px_20px] shadow-slate-500/10 dark:shadow-white/20 rounded-lg border-white/20 border-l-white/20 border-r-white/20 sm:shadow-sm lg:rounded-xl lg:shadow-none`}>
                     <div className="flex flex-col p-6">
                         <h3 className="text-xl font-semibold leading-6 tracking-tighter">
                             Login
                         </h3>
-                        <p className="mt-1.5 text-sm font-medium text-white/50">
+                        <p className={`mt-1.5 text-sm font-medium ${dark ? "text-white/50" : ""}`}>
                             Welcome back, enter your credentials to continue.
                         </p>
                     </div>
@@ -99,7 +83,7 @@ export default function LoginDark({ mode }) {
                                 <div>
                                     <div className="group relative rounded-lg border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-sky-300/30">
                                         <div className="flex justify-between">
-                                            <label className="text-xs font-medium text-muted-foreground group-focus-within:text-white text-gray-400">
+                                            <label className={`text-xs font-medium text-muted-foreground ${dark ? "group-focus-within:text-white" : "group-focus-within:text-black"} text-gray-400`}>
                                                 Email
                                             </label>
                                             <div className="absolute right-3 translate-y-2 text-green-200">
@@ -121,7 +105,7 @@ export default function LoginDark({ mode }) {
                                             id="email"
                                             type="email"
                                             placeholder="Username"
-                                            autoComplete="off"
+                                            // autoComplete="off"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
@@ -134,7 +118,7 @@ export default function LoginDark({ mode }) {
                                 <div>
                                     <div className="group relative rounded-lg border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-sky-300/30">
                                         <div className="flex justify-between">
-                                            <label className="text-xs font-medium text-muted-foreground group-focus-within:text-white text-gray-400">
+                                            <label className={`text-xs font-medium text-muted-foreground ${dark ? "group-focus-within:text-white" : "group-focus-within:text-black"} text-gray-400`}>
                                                 Password
                                             </label>
                                         </div>

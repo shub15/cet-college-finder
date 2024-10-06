@@ -46,7 +46,7 @@ const CollegeDetails = () => {
 
             {/* College Location and Website */}
             <p className="text-gray-500 text-xl">Location: {collegeData.location}</p>
-            <p className="text-gray-500 text-xl">Website: <a href={`https://${collegeData.website}`} className="text-blue-500 underline">{collegeData.website}</a></p>
+            <p className="text-gray-500 text-xl">Website: <a href={`https://${collegeData.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">{collegeData.website}</a></p>
 
             {/* Description Section */}
             <section className="my-6">
@@ -58,20 +58,42 @@ const CollegeDetails = () => {
             <section className="my-6">
                 <h2 className="text-2xl font-semibold mb-2">Branches and Cutoffs</h2>
                 {collegeData.branches.length > 0 ? (
-                    <ol className="list-decimal">
-                        {collegeData.branches.map((branch) => (
-                            <li key={branch.collegeBranchId} className="my-4">
-                                <h3 className="font-semibold">{branch.branchName}</h3>
-                                <ul className="list-disc list-inside ml-6">
-                                    {Object.entries(branch.cutoffCategories).map(([category, cutoff], index) => (
-                                        index > 0 && (<li key={category}>
-                                            {categoryName[index]}: {categoryName[index].includes("Rank") ? cutoff : `${cutoff}%`}
-                                        </li>)
+                    <div className="overflow-x-auto">
+                        <table className="min-w-full bg-white border border-gray-300">
+                            <thead>
+                                <tr className="bg-gray-200">
+                                    <th className="py-2 px-4 border-b">Branch</th>
+                                    {categoryName.slice(1).map((category) => ( // Skip the first element (ID)
+                                        <th key={category} className="py-2 px-4 border-b">{category}</th>
                                     ))}
-                                </ul>
-                            </li>
-                        ))}
-                    </ol>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {collegeData.branches.map((branch) => {
+                                    // Extract cutoff categories, skipping the first (assumed to be "ID")
+                                    const cutoffs = Object.entries(branch.cutoffCategories).slice(1);
+
+                                    return (
+                                        <tr key={branch.collegeBranchId}>
+                                            <td className="py-2 px-4 border-b">{branch.branchName}</td>
+                                            {categoryName.slice(1).map((category, index) => {
+                                                // Get the cutoff value for the current category, or default to '-'
+                                                const cutoffValue = cutoffs[index] ? cutoffs[index][1] : null;
+
+                                                return (
+                                                    <td key={`${branch.collegeBranchId}-${category}`} className="py-2 px-4 border-b text-center">
+                                                        {cutoffValue ?
+                                                            (category.includes("Rank") ? cutoffValue : `${cutoffValue}%`)
+                                                            : '-'}
+                                                    </td>
+                                                );
+                                            })}
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
                 ) : (
                     <p className="text-gray-700">No branches available.</p>
                 )}

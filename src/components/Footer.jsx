@@ -51,7 +51,8 @@ export default function Footer() {
                                     className="bg-white text-blue-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                                     type="button"
                                 >
-                                    <a href="https://github.com/shub15">
+                                    <a href="https://github.com/shub15" target="_blank"
+                                        rel="noopener noreferrer">
                                         <i className="fab fa-github" />
                                     </a>
                                 </button>
@@ -67,7 +68,9 @@ export default function Footer() {
                                         <li>
                                             <a
                                                 className={bg.useful}
-                                                href="https://www.creative-tim.com/presentation?ref=njs-profile"
+                                                href="https://github.com/shub15"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                             >
                                                 About Us
                                             </a>
@@ -75,7 +78,7 @@ export default function Footer() {
                                         <li>
                                             <a
                                                 className={bg.useful}
-                                                href="https://blog.creative-tim.com?ref=njs-profile"
+                                                href="https://github.com/shub15"
                                             >
                                                 Blog
                                             </a>
@@ -83,7 +86,7 @@ export default function Footer() {
                                         <li>
                                             <a
                                                 className={bg.useful}
-                                                href="https://www.github.com/creativetimofficial?ref=njs-profile"
+                                                href="https://github.com/shub15"
                                             >
                                                 Github
                                             </a>
@@ -91,7 +94,7 @@ export default function Footer() {
                                         <li>
                                             <a
                                                 className={bg.useful}
-                                                href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
+                                                href="/"
                                             >
                                                 Free Products
                                             </a>
@@ -148,7 +151,7 @@ export default function Footer() {
                                 <Link
                                     to="/about"
                                     className="text-blue-100 hover:text-blue-500"
-                                    // target="_blank"
+                                // target="_blank"
                                 >
                                     {" "}
                                     Sahil Doshi, Shubham Maity, Vatsal Umrania
