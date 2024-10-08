@@ -24,13 +24,22 @@ function College() {
   const [cutoffFilter, setCutoffFilter] = useState('');
   console.log(colleges);
 
-  // Fetch college data from the backend
   useEffect(() => {
-    axios.get(`${API_URL}/api/colleges`)
-      .then(response => {
-        setColleges(response.data);
-      })
-      .catch(error => console.error('Error fetching data: ', error));
+    // Check if colleges data exists in localStorage
+    const cachedData = localStorage.getItem('collegesData');
+
+    if (cachedData) {
+      setColleges(JSON.parse(cachedData)); // Load from cache
+    } else {
+      // Fetch from the backend if no cache is found
+      axios.get(`${API_URL}/api/colleges`)
+        .then(response => {
+          setColleges(response.data);
+          // Store the data in localStorage
+          localStorage.setItem('collegesData', JSON.stringify(response.data));
+        })
+        .catch(error => console.error('Error fetching data: ', error));
+    }
   }, []);
 
   // Filter the colleges based on search and filter criteria

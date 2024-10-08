@@ -79,6 +79,7 @@ export default function LoginDark() {
                     </div>
                     <div className="p-6 pt-0">
                         <form onSubmit={handleSubmit}>
+                            {error && <p className="text-red-500 text-center mb-4">{error}</p>}
                             <div>
                                 <div>
                                     <div className="group relative rounded-lg border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-sky-300/30">

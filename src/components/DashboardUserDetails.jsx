@@ -1,15 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from './AuthContext';
+
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 const DashboardUserDetails = () => {
-    const [user, setUser] = useState({ name: "shub", email: "shub@example.com" });
+    const { detail } = useContext(AuthContext)
+    const [user, setUser] = useState();
 
     // Fetch single user data from backend
     useEffect(() => {
-        fetch(`${import.meta.env.REACT_APP_API_URL}/api/user`) // Assuming there's a single user endpoint
-            .then((response) => response.json())
-            .then((data) => setUser(data))
-            .catch((error) => console.error('Error fetching data:', error));
-    }, []);
+        const fetchUser = async () => {
+            try {
+                const response = await fetch(`${API_URL}/api/user/userbyemail`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: detail }),
+                });
+                const data = await response.json();
+                console.log(data)
+                setUser(data); // Store the colleges data in state
+            } catch (err) {
+                console.error('Failed to load user', err);
+            }
+        }
+
+        fetchUser();
+    }, [detail]);
+
+    console.log(user)
+
+    // // Fetch single user data from backend
+    // useEffect(() => {
+    //     fetch(`${import.meta.env.REACT_APP_API_URL}/api/user`) // Assuming there's a single user endpoint
+    //         .then((response) => response.json())
+    //         .then((data) => setUser(data))
+    //         .catch((error) => console.error('Error fetching data:', error));
+    // }, []);
 
     if (!user) return <div>Loading...</div>;
 

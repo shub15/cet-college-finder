@@ -55,24 +55,6 @@ export default function Navbar(props) {
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-                        <link
-                            rel="stylesheet"
-                            href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css"
-                        />
-                        <label htmlFor="toggle-example" className="flex items-center cursor-pointer relative mr-4">
-                            <input
-                                type="checkbox"
-                                id="toggle-example"
-                                className="sr-only"
-                                onChange={() => setDarkMode(!dark)}
-                                checked={dark} // Make sure the checkbox reflects the current state
-                            />
-                            <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full" />
-                            <span className={`ml-3 text-white text-sm font-medium`}>
-                                Dark Mode
-                            </span>
-                        </label>
                         {/* Profile dropdown */}
                         <Menu as="div" className="relative ml-3">
                             <div>
@@ -96,6 +78,25 @@ export default function Navbar(props) {
                                         Sign out
                                     </Link>
                                 </MenuItem>)}
+                                <link
+                                    rel="stylesheet"
+                                    href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css"
+                                />
+                                <div className='block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100'>
+                                    <label htmlFor="toggle-example" className="flex items-center cursor-pointer relative">
+                                        <input
+                                            type="checkbox"
+                                            id="toggle-example"
+                                            className="sr-only"
+                                            onChange={() => setDarkMode(!dark)}
+                                            checked={dark} // Make sure the checkbox reflects the current state
+                                        />
+                                        <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full" />
+                                        <span className={`ml-3 text-sm font-medium`}>
+                                            Dark Mode
+                                        </span>
+                                    </label>
+                                </div>
                             </MenuItems>
                         </Menu>
                     </div>
