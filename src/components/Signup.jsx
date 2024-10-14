@@ -55,9 +55,9 @@ function Signup() {
             <input
               id="email"
               type="email"
-              className="w-full p-2 mt-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-2 mt-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500"
               required
             />
           </div>
