@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import toTitleCase from './CaseConverter'
+import toTitleCase from '../CaseConverter'
 
 export default function College({ id, college }) {
     const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id })

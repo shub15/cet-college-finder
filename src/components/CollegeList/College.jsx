@@ -5,7 +5,7 @@ import CollegeList from './CollegeList';
 const API_URL = import.meta.env.VITE_API_URL || '';
 console.log('API_URL:', API_URL);
 
-// The list of locations for the filter (removing duplicates)
+// The list of locations, branches, and college types for the filters
 const LOCATIONS = [
   "Matunga", "Andheri", "Vile Parle", "Bandra", "Chembur", "Sion", "Vashi", "Wadala",
   "Kandivali", "Mumbai", "Nerul", "Borivali", "Mahim", "Vasai", "Navi Mumbai", "New Panvel",
@@ -15,39 +15,75 @@ const LOCATIONS = [
   "Shedung", "Yadavrao Tasgaonkar Institute of Engineering & Technology", "Karjat", "Shahapur, Asangaon",
   "Kankavli", "Ulhasnagar", "Sapgaon", "At. Villege Betegaon", "Wada", "Kanhor",
   "Shelu", "At. Mamdapur, Post- Neral, Tal- Karjat", "Tala"
+]; // Your existing locations array
+const BRANCHES = [
+  "Civil Engineering", 
+  "Computer Science And Engineering",
+  "Computer Engineering", 
+  "Information Technology", 
+  "Cyber Security", 
+  "Internet Of Things (Iot)", 
+  "Mechanical And Mechatronics Engineering (Additive Manufacturing)", 
+  "Computer Science And Engineering (Cyber Security)", 
+  "Artificial Intelligence (AI) And Data Science", 
+  "Electrical Engineering", 
+  "Electronics And Telecommunication Engg", 
+  "Electronics Engineering", 
+  "Electronics Engineering (VLSI Design And Technology)", 
+  "Bio Medical Engineering", 
+  "Instrumentation Engineering", 
+  "Chemical Engineering", 
+  "Automobile Engineering", 
+  "Mechanical Engineering", 
+  "Mechatronics Engineering", 
+  "Electronics And Computer Science", 
+  "Computer Science And Engineering (Artificial Intelligence And Machine Learning)", 
+  "Computer Science And Engineering (Data Science)", 
+  "Automation And Robotics", 
+  "Civil And Infrastructure Engineering", 
+  "Computer Science And Engineering (Internet Of Things And Cyber Security Including Blockchain Technology)", 
+  "Artificial Intelligence And Machine Learning", 
+  "Electronics And Communication (Advanced Communication Technology)", 
+  "Artificial Intelligence And Data Science"
 ];
+
+const COLLEGE_TYPES = ["Autonomous", "Minority", "Non-Minority"];
 
 function College() {
   const [colleges, setColleges] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [locationFilter, setLocationFilter] = useState('');
   const [cutoffFilter, setCutoffFilter] = useState('');
-  console.log(colleges);
+  const [branchFilter, setBranchFilter] = useState('');
+  const [collegeTypeFilter, setCollegeTypeFilter] = useState('');
 
   useEffect(() => {
-    // Check if colleges data exists in localStorage
     const cachedData = localStorage.getItem('collegesData');
-
     if (cachedData) {
       setColleges(JSON.parse(cachedData)); // Load from cache
     } else {
-      // Fetch from the backend if no cache is found
       axios.get(`${API_URL}/api/colleges`)
         .then(response => {
           setColleges(response.data);
-          // Store the data in localStorage
           localStorage.setItem('collegesData', JSON.stringify(response.data));
         })
         .catch(error => console.error('Error fetching data: ', error));
     }
   }, []);
 
-  // Filter the colleges based on search and filter criteria
+  // Filter colleges based on search, location, branch, cutoff, and college type
   const filteredColleges = colleges.filter(college => {
+    const branchMatch = branchFilter === '' || college.branches.some(branch => branch.branchName === branchFilter);
+    const collegeTypeMatch = collegeTypeFilter === '' || (collegeTypeFilter === 'Autonomous' && college.autonomy === 1) || 
+                             (collegeTypeFilter === 'Minority' && college.minority) ||
+                             (collegeTypeFilter === 'Non-Minority' && !college.minority && college.autonomy !== 1);
+
     return (
       college.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
       (locationFilter === '' || college.location.toLowerCase() === locationFilter.toLowerCase()) &&
-      (cutoffFilter === '' || college.cutoff2023 <= parseFloat(cutoffFilter))
+      (cutoffFilter === '' || college.branches.some(branch => branch.cutoffCategories?.openPercentile <= parseFloat(cutoffFilter))) &&
+      branchMatch &&
+      collegeTypeMatch
     );
   });
 
@@ -67,7 +103,7 @@ function College() {
       </div>
 
       {/* Filters */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
         <div>
           <select
             value={locationFilter}
@@ -78,6 +114,36 @@ function College() {
             {LOCATIONS.map(location => (
               <option key={location} value={location}>
                 {location}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <select
+            value={branchFilter}
+            onChange={e => setBranchFilter(e.target.value)}
+            className="border rounded w-full py-2 px-4"
+          >
+            <option value="">All Branches</option>
+            {BRANCHES.map(branch => (
+              <option key={branch} value={branch}>
+                {branch}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <select
+            value={collegeTypeFilter}
+            onChange={e => setCollegeTypeFilter(e.target.value)}
+            className="border rounded w-full py-2 px-4"
+          >
+            <option value="">All College Types</option>
+            {COLLEGE_TYPES.map(type => (
+              <option key={type} value={type}>
+                {type}
               </option>
             ))}
           </select>

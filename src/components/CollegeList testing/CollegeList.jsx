@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 // import Colleges from './Colleges';
 // import collegeList from '../json/colleges.json'
 // import { closestCorners, DndContext, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors } from '@dnd-kit/core';
-import ColumnHead from './ColumnHead';
+import ColumnHead from '../ColumnHead';
 // import { arrayMove, sortableKeyboardCoordinates } from '@dnd-kit/sortable';
 import FetchColleges from './FetchColleges';
-import TestColleges from './testing/TestColleges';
-import TestLoading from './testing/TestLoading';
+import TestColleges from '../testing/TestColleges';
+import TestLoading from '../testing/TestLoading';
 import Search from '../assets/search.png'
 
 export default function CollegeList() {

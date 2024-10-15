@@ -8,7 +8,7 @@ const Logout = () => {
 
   const handleLogout = () => {
     // Clear authentication flag
-    localStorage.removeItem('auth');
+    localStorage.removeItem('admin');
     addDetail(null);
     navigate('/admin/login');
   };

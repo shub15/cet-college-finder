@@ -14,7 +14,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${API_URL}/api/user/auth`, {
+      const response = await fetch(`${API_URL}/api/admin/auth`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ const AdminLogin = () => {
 
       if (authenticated) {
         // Store authentication flag in localStorage or sessionStorage
-        localStorage.setItem('auth', 'true');
+        localStorage.setItem('admin', 'true');
         navigate('/admin');  // Redirect to admin page after successful login
       } else {
         setError('Invalid credentials. Please try again.');

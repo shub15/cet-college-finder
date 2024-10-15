@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../AuthContext';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
 

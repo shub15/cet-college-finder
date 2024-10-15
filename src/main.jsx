@@ -7,22 +7,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from './components/ErrorPage.jsx';
-import Form from './components/Form.jsx';
+import Form from './components/Auth/Form.jsx';
 import SearchCollege from './components/SearchCollege.jsx';
 import Body from './components/Body.jsx';
-import Login from './components/Login.jsx';
-import Dashboard from './components/Dashboard.jsx';
-import Signup from './components/Signup.jsx';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
 import CollegeForm from './components/CollegeForm.jsx';
 import NotificationForm from './components/NotificationForm.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import AdminLogin from './components/AdminPage/AdminLogin.jsx';
-import College from './components/testingCollegeList/College.jsx';
+import College from './components/CollegeList/College.jsx';
 import Admin from './components/AdminPage/Admin.jsx';
 import PrivateRoute from './components/AdminPage/PrivateRoute.jsx';
-import LogoutPage from './components/Logout.jsx';
-import CollegeDetails from './components/CollegeDetails.jsx';
-import LoginDark from './components/LoginDark.jsx';
+import LogoutPage from './components/Auth/Logout.jsx';
+import CollegeDetails from './components/CollegeList/CollegeDetails.jsx';
+import LoginDark from './components/Auth/LoginDark.jsx';
 
 const router = createBrowserRouter([
   {
@@ -64,7 +62,6 @@ const router = createBrowserRouter([
       },
       {
         path: "/signup",
-        // element: <Signup />
         element: <Form />
       },
       {
