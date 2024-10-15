@@ -57,6 +57,8 @@ function College() {
   const [branchFilter, setBranchFilter] = useState('');
   const [collegeTypeFilter, setCollegeTypeFilter] = useState('');
 
+  console.log(colleges)
+
   useEffect(() => {
     const cachedData = localStorage.getItem('collegesData');
     if (cachedData) {
@@ -75,8 +77,8 @@ function College() {
   const filteredColleges = colleges.filter(college => {
     const branchMatch = branchFilter === '' || college.branches.some(branch => branch.branchName === branchFilter);
     const collegeTypeMatch = collegeTypeFilter === '' || (collegeTypeFilter === 'Autonomous' && college.autonomy === 1) || 
-                             (collegeTypeFilter === 'Minority' && college.minority) ||
-                             (collegeTypeFilter === 'Non-Minority' && !college.minority && college.autonomy !== 1);
+                             (collegeTypeFilter === 'Minority' && college.minority != null && college.minority !== '') ||
+                             (collegeTypeFilter === 'Non-Minority' && (college.minority == null || college.minority === '' || !college.minority) && college.autonomy !== 1);
 
     return (
       college.name.toLowerCase().includes(searchQuery.toLowerCase()) &&

@@ -17,19 +17,26 @@ export default function Form() {
   const [percentile, setPercentile] = useState(100);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const [newAcc, setNewAcc] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      await fetch(`${API_URL}/api/user/add`, {
+      const response = await fetch(`${API_URL}/api/user/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email, name, password, location, reservation, percentile: Number(percentile) }),
       });
-      setSuccess(true);
+      const newAcc = await response.json();
+      if(newAcc){
+        setNewAcc(true)
+        setSuccess(true);
+      } else {
+        setNewAcc(false)
+      }
     } catch (err) {
       setError('An error occurred. Please try again.');
     }
@@ -51,6 +58,7 @@ export default function Form() {
               </div>
               {error && <p className="text-red-500 text-center mb-4">{error}</p>}
               {success && <p className='text-green-700 text-center mb-4'>Account created successfully!</p>}
+              {!newAcc && <p className='text-red-500 text-center mb-4'>Account already exist!</p>}
               <div className="lg:col-span-2">
                 <form onSubmit={handleSubmit}>
                   <div className="grid gap-4 gap-y-5 text-lg grid-cols-1 md:grid-cols-5">

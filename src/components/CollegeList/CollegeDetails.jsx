@@ -37,12 +37,16 @@ const CollegeDetails = () => {
         website: details.website || 'N/A',
         description: details.description || 'A premier institution offering various branches of engineering.',
         branches: details.branches || [],
+        logo: details.logo
     };
 
     return (
         <div className="container mx-auto p-6">
-            {/* College Name */}
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">{collegeData.name}</h1>
+            <div className='flex justify-between'>
+                {/* College Name */}
+                <h1 className="text-4xl font-bold text-blue-600 mb-4">{collegeData.name}</h1>
+                {collegeData.logo && <img src={collegeData.logo} alt='college logo' />}
+            </div>
 
             {/* College Location and Website */}
             <p className="text-gray-500 text-xl">Location: {collegeData.location}</p>

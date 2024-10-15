@@ -62,7 +62,7 @@ function Dashboard() {
                   <td className="py-2 px-4">{college.name}</td>
                   <td className="py-2 px-4 text-yellow-600">{college.location}</td>
                   <td className="py-2 px-4 text-blue-600 hover:underline">
-                    <a href={`https://${college.website}`}>
+                    <a href={`https://${college.website}`} target="_blank" rel="noopener noreferrer">
                       {college.website}
                     </a>
                   </td>

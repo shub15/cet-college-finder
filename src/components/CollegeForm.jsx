@@ -128,13 +128,13 @@ function CollegeForm() {
             value={formData.collegeType} 
             onChange={handleChange} 
             className="border rounded w-full py-2 px-4"
-            placeholder="Engineering, Medical, etc."
+            placeholder="Minority, Non-Minority, etc"
           />
         </div>
 
         {/* Cutoffs */}
         <div>
-          <label className="block text-sm font-medium">Cutoff 2023</label>
+          <label className="block text-sm font-medium">Cutoff</label>
           <input 
             type="number" 
             name="cutoff2023" 
@@ -144,7 +144,7 @@ function CollegeForm() {
           />
         </div>
 
-        <div>
+        {/* <div>
           <label className="block text-sm font-medium">Cutoff 2022</label>
           <input 
             type="number" 
@@ -175,7 +175,7 @@ function CollegeForm() {
             onChange={handleChange} 
             className="border rounded w-full py-2 px-4"
           />
-        </div>
+        </div> */}
 
         {/* Submit Button */}
         <button 

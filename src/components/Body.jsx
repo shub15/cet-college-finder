@@ -33,7 +33,7 @@ export default function Body() {
           ) : (
             <ol className={`list-decimal ml-6 ${dark ? "text-blue-200" : "text-gray-700"}`}>
               {notifications.map((notification, index) => (
-                <li key={index} className="mt-2">{notification}</li>
+                <li key={index} className="mt-2">{notification.text}</li>
               ))}
             </ol>
           )}

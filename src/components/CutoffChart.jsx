@@ -29,7 +29,7 @@ const CutoffChart = () => {
     const [cutoffData, setCutoffData] = useState([
         { year: 2020, cutoff: 85 },
         { year: 2021, cutoff: 89 },
-        { year: 2022, cutoff: 98 },
+        { year: 2022, cutoff: 95 },
         { year: 2023, cutoff: 98 },
     ]);
 
