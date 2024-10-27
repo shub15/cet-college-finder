@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Solarized Light */
+.bg-solarized-light-bg { background-color: #fdf6e3; }
+.text-solarized-light-text { color: #657b83; }
+.bg-solarized-light-button { background-color: #268bd2; }
+.bg-solarized-light-hover { background-color: #2aa198; }
+.bg-solarized-light-notification { background-color: #eee8d5; }
+.text-solarized-light-notif-text { color: #93a1a1; }
+
+/* Solarized Dark */
+.bg-solarized-dark-bg { background-color: #002b36; }
+.text-solarized-dark-text { color: #839496; }
+.bg-solarized-dark-button { background-color: #586e75; }
+.bg-solarized-dark-hover { background-color: #657b83; }
+.bg-solarized-dark-notification { background-color: #073642; }
+.text-solarized-dark-notif-text { color: #93a1a1; }

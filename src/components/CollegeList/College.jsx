@@ -17,33 +17,33 @@ const LOCATIONS = [
   "Shelu", "At. Mamdapur, Post- Neral, Tal- Karjat", "Tala"
 ]; // Your existing locations array
 const BRANCHES = [
-  "Civil Engineering", 
+  "Civil Engineering",
   "Computer Science And Engineering",
-  "Computer Engineering", 
-  "Information Technology", 
-  "Cyber Security", 
-  "Internet Of Things (Iot)", 
-  "Mechanical And Mechatronics Engineering (Additive Manufacturing)", 
-  "Computer Science And Engineering (Cyber Security)", 
-  "Artificial Intelligence (AI) And Data Science", 
-  "Electrical Engineering", 
-  "Electronics And Telecommunication Engg", 
-  "Electronics Engineering", 
-  "Electronics Engineering (VLSI Design And Technology)", 
-  "Bio Medical Engineering", 
-  "Instrumentation Engineering", 
-  "Chemical Engineering", 
-  "Automobile Engineering", 
-  "Mechanical Engineering", 
-  "Mechatronics Engineering", 
-  "Electronics And Computer Science", 
-  "Computer Science And Engineering (Artificial Intelligence And Machine Learning)", 
-  "Computer Science And Engineering (Data Science)", 
-  "Automation And Robotics", 
-  "Civil And Infrastructure Engineering", 
-  "Computer Science And Engineering (Internet Of Things And Cyber Security Including Blockchain Technology)", 
-  "Artificial Intelligence And Machine Learning", 
-  "Electronics And Communication (Advanced Communication Technology)", 
+  "Computer Engineering",
+  "Information Technology",
+  "Cyber Security",
+  "Internet Of Things (Iot)",
+  "Mechanical And Mechatronics Engineering (Additive Manufacturing)",
+  "Computer Science And Engineering (Cyber Security)",
+  "Artificial Intelligence (AI) And Data Science",
+  "Electrical Engineering",
+  "Electronics And Telecommunication Engg",
+  "Electronics Engineering",
+  "Electronics Engineering (VLSI Design And Technology)",
+  "Bio Medical Engineering",
+  "Instrumentation Engineering",
+  "Chemical Engineering",
+  "Automobile Engineering",
+  "Mechanical Engineering",
+  "Mechatronics Engineering",
+  "Electronics And Computer Science",
+  "Computer Science And Engineering (Artificial Intelligence And Machine Learning)",
+  "Computer Science And Engineering (Data Science)",
+  "Automation And Robotics",
+  "Civil And Infrastructure Engineering",
+  "Computer Science And Engineering (Internet Of Things And Cyber Security Including Blockchain Technology)",
+  "Artificial Intelligence And Machine Learning",
+  "Electronics And Communication (Advanced Communication Technology)",
   "Artificial Intelligence And Data Science"
 ];
 
@@ -76,9 +76,9 @@ function College() {
   // Filter colleges based on search, location, branch, cutoff, and college type
   const filteredColleges = colleges.filter(college => {
     const branchMatch = branchFilter === '' || college.branches.some(branch => branch.branchName === branchFilter);
-    const collegeTypeMatch = collegeTypeFilter === '' || (collegeTypeFilter === 'Autonomous' && college.autonomy === 1) || 
-                             (collegeTypeFilter === 'Minority' && college.minority != null && college.minority !== '') ||
-                             (collegeTypeFilter === 'Non-Minority' && (college.minority == null || college.minority === '' || !college.minority) && college.autonomy !== 1);
+    const collegeTypeMatch = collegeTypeFilter === '' || (collegeTypeFilter === 'Autonomous' && college.autonomy === 1) ||
+      (collegeTypeFilter === 'Minority' && college.minority != null && college.minority !== '') ||
+      (collegeTypeFilter === 'Non-Minority' && (college.minority == null || college.minority === '' || !college.minority) && college.autonomy !== 1);
 
     return (
       college.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
@@ -160,6 +160,24 @@ function College() {
             onChange={e => setCutoffFilter(e.target.value)}
           />
         </div>
+      </div>
+
+      {/* Refresh Button */}
+      <div className="mb-6 sm:text-left text-center">
+        <button
+          onClick={() => {
+            localStorage.removeItem('collegesData'); // Remove the cached data
+            axios.get(`${API_URL}/api/colleges`)
+              .then(response => {
+                setColleges(response.data); // Update state with the new data
+                localStorage.setItem('collegesData', JSON.stringify(response.data)); // Cache the new data
+              })
+              .catch(error => console.error('Error fetching data: ', error));
+          }}
+          className="bg-blue-500 text-white px-4 py-2 rounded"
+        >
+          Refresh
+        </button>
       </div>
 
       {/* College List */}

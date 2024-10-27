@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Line } from 'react-chartjs-2';
 // import axios from 'axios';  // Uncomment when you want to fetch data
 import DarkModeContext from './DarkModeContext'; // Import your dark mode context
+import { ThemeContext } from './ThemeContext';
 
 // Import required chart components
 import {
@@ -26,6 +27,7 @@ ChartJS.register(
 );
 
 const CutoffChart = () => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const [cutoffData, setCutoffData] = useState([
         { year: 2020, cutoff: 85 },
         { year: 2021, cutoff: 89 },
@@ -33,6 +35,7 @@ const CutoffChart = () => {
         { year: 2023, cutoff: 98 },
     ]);
 
+    const themeHandler = (theme.background != "bg-gray-50" && theme.background != "bg-solarized-light-bg");
     const { dark } = useContext(DarkModeContext); // Get dark mode state
 
     // Fetch cutoff data from backend
@@ -56,12 +59,14 @@ const CutoffChart = () => {
             {
                 label: 'Cutoff Percentile',
                 data: cutoffData.map((item) => item.cutoff),
-                borderColor: dark ? 'rgba(66, 135, 245, 1)' : 'rgba(75, 192, 192, 1)', // Change border color based on mode
-                backgroundColor: dark ? 'rgba(66, 135, 245, 0.2)' : 'rgba(75, 192, 192, 0.2)', // Change fill color based on mode
+                // borderColor: dark ? 'rgba(66, 135, 245, 1)' : 'rgba(75, 192, 192, 1)', // Change border color based on mode
+                // backgroundColor: dark ? 'rgba(66, 135, 245, 0.2)' : 'rgba(75, 192, 192, 0.2)', // Change fill color based on mode
+                borderColor: themeHandler ? 'rgba(66, 135, 245, 1)' : 'rgba(75, 192, 192, 1)', // Change border color based on mode
+                backgroundColor: themeHandler ? 'rgba(66, 135, 245, 0.2)' : 'rgba(75, 192, 192, 0.2)', // Change fill color based on mode
                 fill: true,
                 tension: 0.4, // Smoothing the curve
                 pointBorderColor: '#fff', // Point border color
-                pointBackgroundColor: dark ? 'rgba(66, 135, 245, 1)' : 'rgba(75, 192, 192, 1)', // Change point color based on mode
+                pointBackgroundColor: themeHandler ? 'rgba(66, 135, 245, 1)' : 'rgba(75, 192, 192, 1)', // Change point color based on mode
                 pointRadius: 5, // Point size
                 pointHoverRadius: 7, // Point hover size
             },
@@ -76,13 +81,13 @@ const CutoffChart = () => {
                 display: true,
                 position: 'top',
                 labels: {
-                    color: dark ? '#ffffff' : '#333', // Change legend label color based on mode
+                    color: themeHandler ? '#ffffff' : '#333', // Change legend label color based on mode
                 },
             },
             title: {
                 display: true,
                 text: 'Cutoff Trend Over the Years',
-                color: dark ? '#ffffff' : '#333', // Change title color based on mode
+                color: themeHandler ? '#ffffff' : '#333', // Change title color based on mode
                 font: {
                     size: 24, // Change font size
                 },
@@ -93,19 +98,19 @@ const CutoffChart = () => {
                 title: {
                     display: true,
                     text: 'Year',
-                    color: dark ? '#ffffff' : '#666', // Change X-axis label color based on mode
+                    color: themeHandler ? '#ffffff' : '#666', // Change X-axis label color based on mode
                     font: {
                         size: 16,
                     },
                 },
                 ticks: {
-                    color: dark ? '#ffffff' : '#666', // Change X-axis tick labels color based on mode
+                    color: themeHandler ? '#ffffff' : '#666', // Change X-axis tick labels color based on mode
                     font: {
                         size: 14,
                     },
                 },
                 grid: {
-                    color: dark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(200, 200, 200, 0.2)', // Change grid line color for X-axis based on mode
+                    color: themeHandler ? 'rgba(255, 255, 255, 0.1)' : 'rgba(200, 200, 200, 0.2)', // Change grid line color for X-axis based on mode
                     lineWidth: 1,
                 },
             },
@@ -113,19 +118,19 @@ const CutoffChart = () => {
                 title: {
                     display: true,
                     text: 'Cutoff (%)',
-                    color: dark ? '#ffffff' : '#666', // Change Y-axis label color based on mode
+                    color: themeHandler ? '#ffffff' : '#666', // Change Y-axis label color based on mode
                     font: {
                         size: 16,
                     },
                 },
                 ticks: {
-                    color: dark ? '#ffffff' : '#666', // Change Y-axis tick labels color based on mode
+                    color: themeHandler ? '#ffffff' : '#666', // Change Y-axis tick labels color based on mode
                     font: {
                         size: 14,
                     },
                 },
                 grid: {
-                    color: dark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(200, 200, 200, 0.2)', // Change grid line color for Y-axis based on mode
+                    color: themeHandler ? 'rgba(255, 255, 255, 0.1)' : 'rgba(200, 200, 200, 0.2)', // Change grid line color for Y-axis based on mode
                     lineWidth: 1,
                 },
             },
@@ -133,7 +138,7 @@ const CutoffChart = () => {
     };
 
     return (
-        <div className={`p-8 shadow-lg rounded-lg ${dark ? 'bg-gray-900' : 'bg-white'}`}> {/* Change background based on mode */}
+        <div className={`p-8 shadow-lg rounded-lg ${theme.background} ${theme.text}`}> {/* Change background based on mode */}
             <Line data={data} options={options} />
         </div>
     );

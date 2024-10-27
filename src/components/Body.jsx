@@ -1,22 +1,22 @@
 import React, { useContext } from 'react';
 import { NotificationContext } from './NotificationContext';
+import { ThemeContext } from './ThemeContext';
 import CutoffChart from './CutoffChart';
 import { Link } from 'react-router-dom';
-import DarkModeContext from './DarkModeContext';
 
 export default function Body() {
   const { notifications } = useContext(NotificationContext);
-  const { dark } = useContext(DarkModeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className={`container min-h-screen ${dark ? "bg-slate-950 text-white" : "bg-gray-50 text-gray-900"}`}>
-      <div className={`p-5 sm:p-10 text-center ${dark ? "" : "bg-blue-950"} text-white`}>
+    <div className={`min-h-screen ${theme.background} ${theme.text}`}>
+      <div className={`p-5 sm:p-10 text-center ${theme.background == "bg-gray-50" ? "bg-blue-950 text-white": theme.background} ${theme.text}`}>
         <p className='m-5 sm:m-10 sm:text-5xl text-2xl font-bold'>
           Find the Best College for You!
         </p>
         <div>
           <Link to="/colleges">
-            <button className={`px-6 py-4 text-center text-lg font-semibold ${dark ? "bg-blue-700 hover:bg-blue-600" : "bg-blue-900 hover:bg-blue-800"} rounded-lg`}>
+            <button className={`px-6 py-4 text-center text-lg font-semibold ${theme.button} rounded-lg`}>
               Search Colleges
             </button>
           </Link>
@@ -25,13 +25,30 @@ export default function Body() {
       <div className="p-8">
         <h1 className="text-3xl font-bold mb-4">Welcome to Our Platform</h1>
 
+        {/* Theme switcher */}
+      <div className="mb-4">
+        <label htmlFor="theme" className="mr-2">Switch Theme:</label>
+        <select
+          id="theme"
+          onChange={(e) => toggleTheme(e.target.value)}  // Update theme when user selects an option
+          defaultValue="defaultLight"
+          className={`p-2 rounded ${theme.background} ${theme.text}`}  // Style based on theme
+        >
+          <option value="defaultLight">Default Light</option>
+          <option value="defaultDark">Default Dark</option>
+          <option value="solarizedLight">Solarized Light</option>
+          <option value="solarizedDark">Solarized Dark</option>
+          {/* Add more theme options here */}
+        </select>
+      </div>
+
         {/* Display notifications */}
-        <div className={`shadow-md rounded-lg border-l-4 ${dark ? "border-blue-500 bg-slate-800 text-blue-300" : "border-blue-500 bg-blue-100 text-blue-700"} p-6 mb-8`} role="alert">
+        <div className={`shadow-md rounded-lg border-l-4 border-blue-500 ${theme.notification} p-6 mb-8`} role="alert">
           <h2 className="text-2xl font-bold mb-2">Important Notifications</h2>
           {notifications.length === 0 ? (
             <p className="text-gray-600">No new notifications.</p>
           ) : (
-            <ol className={`list-decimal ml-6 ${dark ? "text-blue-200" : "text-gray-700"}`}>
+            <ol className={`list-decimal ml-6 ${theme.text}`}>
               {notifications.map((notification, index) => (
                 <li key={index} className="mt-2">{notification.text}</li>
               ))}
@@ -39,8 +56,7 @@ export default function Body() {
           )}
         </div>
 
-        {/* Other content of your landing page */}
-        <p className={`mb-4 ${dark ? "text-gray-400" : "text-gray-600"}`}>Please visit the official CET and the respective College website for up-to-date notifications</p>
+        <p className={`${theme.text}`}>Please visit the official CET and the respective College website for up-to-date notifications</p>
       </div>
 
       {/* Cutoff Chart */}
@@ -50,8 +66,7 @@ export default function Body() {
           <CutoffChart />
         </section>
 
-        {/* Other content of your landing page */}
-        <p className={`${dark ? "text-gray-400" : "text-gray-600"}`}>This year's cutoff may vary</p>
+        <p className={`${theme.text}`}>This year's cutoff may vary</p>
       </div>
     </div>
   );

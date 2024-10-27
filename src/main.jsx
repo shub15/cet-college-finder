@@ -11,7 +11,7 @@ import Form from './components/Auth/Form.jsx';
 import SearchCollege from './components/SearchCollege.jsx';
 import Body from './components/Body.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
-import CollegeForm from './components/CollegeForm.jsx';
+import CollegeForm from './components/AdminPage/CollegeForm.jsx';
 import NotificationForm from './components/NotificationForm.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import AdminLogin from './components/AdminPage/AdminLogin.jsx';
@@ -21,6 +21,8 @@ import PrivateRoute from './components/AdminPage/PrivateRoute.jsx';
 import LogoutPage from './components/Auth/Logout.jsx';
 import CollegeDetails from './components/CollegeList/CollegeDetails.jsx';
 import LoginDark from './components/Auth/LoginDark.jsx';
+import EditCollege from './components/AdminPage/EditCollege.jsx';
+import EditCollegeForm from './components/AdminPage/EditCollegeForm.jsx';
 
 const router = createBrowserRouter([
   {
@@ -79,6 +81,14 @@ const router = createBrowserRouter([
           {
             path: "",
             element: <CollegeForm />
+          },
+          {
+            path: "edit",
+            element: <EditCollege />
+          },
+          {
+            path: "editform",
+            element: <EditCollegeForm />
           },
           {
             path: "notifications",
