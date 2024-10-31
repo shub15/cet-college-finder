@@ -27,6 +27,7 @@ const BRANCHES = [
   "Computer Science And Engineering (Cyber Security)",
   "Artificial Intelligence (AI) And Data Science",
   "Electrical Engineering",
+  "Electronics And Computer Science",
   "Electronics And Telecommunication Engg",
   "Electronics Engineering",
   "Electronics Engineering (VLSI Design And Technology)",
@@ -36,7 +37,6 @@ const BRANCHES = [
   "Automobile Engineering",
   "Mechanical Engineering",
   "Mechatronics Engineering",
-  "Electronics And Computer Science",
   "Computer Science And Engineering (Artificial Intelligence And Machine Learning)",
   "Computer Science And Engineering (Data Science)",
   "Automation And Robotics",
@@ -106,7 +106,7 @@ function College() {
 
       {/* Filters */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        <div>
+        {/* <div>
           <select
             value={locationFilter}
             onChange={e => setLocationFilter(e.target.value)}
@@ -116,6 +116,21 @@ function College() {
             {LOCATIONS.map(location => (
               <option key={location} value={location}>
                 {location}
+              </option>
+            ))}
+          </select>
+        </div> */}
+
+        <div>
+          <select
+            value={locationFilter}
+            onChange={(e) => setLocationFilter(e.target.value)}
+            className="border rounded w-full py-2 px-4"
+          >
+            <option value="">All Locations</option>
+            {[...new Set(colleges.map((college) => college.location))].map((location) => (
+              <option key={location} value={location}>
+                {location ? location : "N/A"}
               </option>
             ))}
           </select>
@@ -135,6 +150,22 @@ function College() {
             ))}
           </select>
         </div>
+        
+        {/* 
+        <div>
+          <select
+            value={branchFilter}
+            onChange={(e) => setBranchFilter(e.target.value)}
+            className="border rounded w-full py-2 px-4"
+          >
+            <option value="">All Branches</option>
+            {[...new Set(colleges.map((college) => college.branches.map(branch => branch.branchName)))].map((branchName) => (
+              <option key={branchName} value={branchName}>
+                {branchName ? branchName : "N/A"}
+              </option>
+            ))}
+          </select>
+        </div> */}
 
         <div>
           <select
@@ -182,7 +213,7 @@ function College() {
 
       {/* College List */}
       <CollegeList colleges={filteredColleges} />
-    </div>
+    </div >
   );
 }
 

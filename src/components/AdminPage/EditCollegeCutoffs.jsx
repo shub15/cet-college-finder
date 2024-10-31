@@ -36,11 +36,15 @@ const EditCollegeCutoffs = ({ collegeData, categoryName }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {editableData.map((branch) => (
-                                <tr key={branch.collegeBranchId}>
+                            {editableData.map((branch) => {
+                                const cutoffs = Object.entries(branch.cutoffCategories).slice(1);
+
+                                return (<tr key={branch.collegeBranchId}>
                                     <td className="py-2 px-4 border-b">{branch.branchName}</td>
-                                    {categoryName.slice(1).map((category) => {
-                                        const cutoffValue = branch.cutoffCategories[category] || '';
+                                    {categoryName.slice(1).map((category, index) => {
+                                        const cutoffValue = cutoffs[index] ? cutoffs[index][1] : null;
+
+                                        console.log("I was called" + cutoffValue)
 
                                         return (
                                             <td key={`${branch.collegeBranchId}-${category}`} className="py-2 px-4 border-b text-center">
@@ -53,8 +57,8 @@ const EditCollegeCutoffs = ({ collegeData, categoryName }) => {
                                             </td>
                                         );
                                     })}
-                                </tr>
-                            ))}
+                                </tr>)
+                            })}
                         </tbody>
                     </table>
                 </div>
