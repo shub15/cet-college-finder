@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import EditCollegeCutoffs from './EditCollegeCutoffs';
+import BranchManagement from './BranchManagement';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
 
@@ -14,6 +15,7 @@ function EditCollegeForm () {
     console.log(college)
   
     const collegeData = {
+      id: details.id,
       name: details.name,
       location: details.location,
       website: details.website || 'N/A',
@@ -22,7 +24,7 @@ function EditCollegeForm () {
       logo: details.logo
   };
 
-  const categoryName = ["ID", "Open Rank", "Open Percentile", "TFWS Rank", "TFWS Percentile", "OBC Rank", "OBC Percentile", "MI Rank", "MI Percentile", "EWS Rank", "EWS Percentile"];
+  const categoryName = ["id", "openRank", "openPercentile", "tfwsRank", "tfwsPercentile", "obcRank", "obcPercentile", "miRank", "miPercentile", "ewsRank", "ewsPercentile"];
   
     const [formData, setFormData] = useState({
     name: collegeData.name,
@@ -130,7 +132,7 @@ function EditCollegeForm () {
         </div>
 
         {/* Branch */}
-        <div>
+        {/* <div>
           <label className="block text-sm font-medium">Branch</label>
           <input 
             type="text" 
@@ -139,7 +141,11 @@ function EditCollegeForm () {
             onChange={handleChange} 
             className="border rounded w-full py-2 px-4"
           />
-        </div>
+        </div> */}
+
+        {console.log(formData.branch)}
+
+        <BranchManagement branches={formData.branch}/>
 
         {/* College Type */}
         <div>
@@ -155,7 +161,7 @@ function EditCollegeForm () {
         </div>
 
         {/* Cutoffs */}
-        <div>
+        {/* <div>
           <label className="block text-sm font-medium">Cutoff</label>
           <input 
             type="number" 
@@ -164,7 +170,7 @@ function EditCollegeForm () {
             onChange={handleChange} 
             className="border rounded w-full py-2 px-4"
           />
-        </div>
+        </div> */}
 
          <EditCollegeCutoffs collegeData={collegeData} categoryName={categoryName}/>
 

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const EditCollegeCutoffs = ({ collegeData, categoryName }) => {
-    // Create a state to store the modified branches and cutoff values
-    const [editableData, setEditableData] = useState(collegeData.branches);
+const API_URL = import.meta.env.VITE_API_URL || '';
 
-    // Handler to update cutoff values
+const EditCollegeCutoffs = ({ collegeData, categoryName }) => {
+    const [editableData, setEditableData] = useState(collegeData.branches);
+    const [modifiedCutoffs, setModifiedCutoffs] = useState({});
+
     const handleCutoffChange = (branchId, category, value) => {
         setEditableData((prevData) =>
             prevData.map((branch) =>
@@ -13,12 +14,41 @@ const EditCollegeCutoffs = ({ collegeData, categoryName }) => {
                         ...branch,
                         cutoffCategories: {
                             ...branch.cutoffCategories,
-                            [category]: value,
+                            [category]: parseFloat(value) || 0,
                         },
                     }
                     : branch
             )
         );
+
+        setModifiedCutoffs((prev) => ({
+            ...prev,
+            [branchId]: {
+                ...(prev[branchId] || {}),
+                [category]: parseFloat(value) || 0,
+            },
+        }));
+    };
+
+    const handleSave = async () => {
+        for (const [branchId, cutoffs] of Object.entries(modifiedCutoffs)) {
+            try {
+                const response = await fetch(`${API_URL}/api/colleges/${collegeData.id}/branches/${branchId}/cutoffs`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(cutoffs),
+                });
+                
+                if (response.ok) {
+                    alert(`Cutoff data for branch ${branchId} saved successfully!`);
+                } else {
+                    alert(`Failed to save cutoff data for branch ${branchId}`);
+                }
+            } catch (error) {
+                console.error(`Error saving data for branch ${branchId}:`, error);
+                alert(`An error occurred while saving data for branch ${branchId}`);
+            }
+        }
     };
 
     return (
@@ -37,27 +67,25 @@ const EditCollegeCutoffs = ({ collegeData, categoryName }) => {
                         </thead>
                         <tbody>
                             {editableData.map((branch) => {
-                                const cutoffs = Object.entries(branch.cutoffCategories).slice(1);
+                                return (
+                                    <tr key={branch.collegeBranchId}>
+                                        <td className="py-2 px-4 border-b">{branch.branchName}</td>
+                                        {categoryName.slice(1).map((category) => {
+                                            const cutoffValue = branch.cutoffCategories[category] || 0;
 
-                                return (<tr key={branch.collegeBranchId}>
-                                    <td className="py-2 px-4 border-b">{branch.branchName}</td>
-                                    {categoryName.slice(1).map((category, index) => {
-                                        const cutoffValue = cutoffs[index] ? cutoffs[index][1] : null;
-
-                                        console.log("I was called" + cutoffValue)
-
-                                        return (
-                                            <td key={`${branch.collegeBranchId}-${category}`} className="py-2 px-4 border-b text-center">
-                                                <input
-                                                    type="text"
-                                                    value={cutoffValue}
-                                                    onChange={(e) => handleCutoffChange(branch.collegeBranchId, category, e.target.value)}
-                                                    className="text-center border rounded p-1"
-                                                />
-                                            </td>
-                                        );
-                                    })}
-                                </tr>)
+                                            return (
+                                                <td key={`${branch.collegeBranchId}-${category}`} className="py-2 px-4 border-b text-center">
+                                                    <input
+                                                        type="number"
+                                                        value={cutoffValue}
+                                                        onChange={(e) => handleCutoffChange(branch.collegeBranchId, category, e.target.value)}
+                                                        className="text-center border rounded p-1"
+                                                    />
+                                                </td>
+                                            );
+                                        })}
+                                    </tr>
+                                );
                             })}
                         </tbody>
                     </table>
@@ -65,6 +93,14 @@ const EditCollegeCutoffs = ({ collegeData, categoryName }) => {
             ) : (
                 <p className="text-gray-700">No branches available.</p>
             )}
+            <div className="mt-4 text-center">
+                <button
+                    onClick={handleSave}
+                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                >
+                    Save Changes
+                </button>
+            </div>
         </section>
     );
 };
