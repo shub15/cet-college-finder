@@ -4,11 +4,11 @@ const AboutUs = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
             {/* Header Section */}
-            <section className="bg-blue-600 text-white py-12">
+            <section className="bg-blue-950 text-white py-12">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl font-bold mb-4">About Us</h1>
                     <p className="text-lg max-w-2xl mx-auto">
-                        CET College Finder is your ultimate tool for navigating the complex process of college admissions in Maharashtra. Designed specifically for students who have taken the CET exam, our platform helps you identify the best colleges based on your scores, reservation status, and other personalized criteria.
+                        CET College Finder is your ultimate tool for navigating the complex process of college admissions in Maharashtra. Designed specifically for students who have taken the CET exam, our platform helps you identify the best colleges based on your personalized criteria.
                     </p>
                 </div>
             </section>
@@ -20,7 +20,7 @@ const AboutUs = () => {
                     <div className="bg-white shadow-md p-8 rounded-lg">
                         <h2 className="text-2xl font-semibold mb-4 text-blue-600">Our Mission</h2>
                         <p className="text-gray-600">
-                            Our mission is to help students to find the college based on their interest and carrier they want to pursue in. 
+                            Our mission is to help students to find the college based on their interest and carrier they want to pursue. 
                         </p>
                     </div>
 
@@ -28,7 +28,7 @@ const AboutUs = () => {
                     <div className="bg-white shadow-md p-8 rounded-lg">
                         <h2 className="text-2xl font-semibold mb-4 text-blue-600">Our Vision</h2>
                         <p className="text-gray-600">
-                            "Unlock Your Future: Find the Perfect College with CETCollegeFinder"
+                            "Unlock Your Future: Find the Perfect College with CET College Finder"
                         </p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const AboutUs = () => {
                             <h3 className="text-xl font-semibold text-gray-800">Shubham Maity</h3>
                             <p className="text-blue-600">Project Lead</p>
                             <p className="text-gray-600 mt-2">
-                                Frontend and backend.
+                                Frontend, Backend & MySQL.
                             </p>
                         </div>
 
@@ -73,9 +73,9 @@ const AboutUs = () => {
                         <div className="bg-white shadow-md p-6 rounded-lg text-center">
                             <img src="https://via.placeholder.com/150" alt="Team Member" className="w-32 h-32 mx-auto rounded-full mb-4" />
                             <h3 className="text-xl font-semibold text-gray-800">Vatsal Umrania</h3>
-                            <p className="text-blue-600">Member</p>
+                            <p className="text-blue-600">Data Base</p>
                             <p className="text-gray-600 mt-2">
-                                Data Survey.
+                                Data Survey, ER Model
                             </p>
                         </div>
 

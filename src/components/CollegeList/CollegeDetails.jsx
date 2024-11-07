@@ -45,7 +45,7 @@ const CollegeDetails = () => {
             <div className='flex justify-between'>
                 {/* College Name */}
                 <h1 className="text-4xl font-bold text-blue-600 mb-4">{collegeData.name}</h1>
-                {collegeData.logo && <img src={collegeData.logo} alt='college logo' />}
+                {/* {collegeData.logo && <img src={collegeData.logo} alt='college logo' />} */}
             </div>
 
             {/* College Location and Website */}

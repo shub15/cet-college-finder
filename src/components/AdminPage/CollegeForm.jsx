@@ -89,12 +89,12 @@ function CollegeForm() {
         <div>
           <label className="block text-sm font-medium">Website</label>
           <input
-            type="url"
+            type="text"
             name="website"
             value={formData.website}
             onChange={handleChange}
             className="border rounded w-full py-2 px-4"
-            placeholder="https://example.com"
+            placeholder="example.com"
           />
         </div>
 

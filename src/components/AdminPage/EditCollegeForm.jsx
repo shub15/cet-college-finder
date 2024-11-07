@@ -6,27 +6,27 @@ import BranchManagement from './BranchManagement';
 
 const API_URL = import.meta.env.VITE_API_URL || '';
 
-function EditCollegeForm () {
-    const location = useLocation();
-    const college = location.state;  // Access passed college details
-    const details = college.college;
+function EditCollegeForm() {
+  const location = useLocation();
+  const college = location.state;
+  const details = college.college;
 
-    console.log(details)
-    console.log(college)
-  
-    const collegeData = {
-      id: details.id,
-      name: details.name,
-      location: details.location,
-      website: details.website || 'N/A',
-      description: details.description || 'A premier institution offering various branches of engineering.',
-      branches: details.branches || [],
-      logo: details.logo
+  // console.log(details)
+  // console.log(college)
+
+  const collegeData = {
+    id: details.id,
+    name: details.name,
+    location: details.location,
+    website: details.website || 'N/A',
+    description: details.description || 'A premier institution offering various branches of engineering.',
+    branches: details.branches || [],
+    logo: details.logo
   };
 
   const categoryName = ["id", "openRank", "openPercentile", "tfwsRank", "tfwsPercentile", "obcRank", "obcPercentile", "miRank", "miPercentile", "ewsRank", "ewsPercentile"];
-  
-    const [formData, setFormData] = useState({
+
+  const [formData, setFormData] = useState({
     name: collegeData.name,
     website: collegeData.website,
     location: collegeData.location,
@@ -37,7 +37,7 @@ function EditCollegeForm () {
     cutoff2021: '',
     cutoff2020: ''
   });
-  
+
   const [success, setSuccess] = useState(false); // New state for success message
 
   // Handle input changes
@@ -50,32 +50,31 @@ function EditCollegeForm () {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccess(false); // Reset success state on new submission
+    setSuccess(false);
 
-    // Submit form data to the backend
-    axios.post(`${API_URL}/api/colleges`, formData)
-      .then(response => {
-        console.log('College data submitted successfully', response.data);
-        setSuccess(true); // Set success to true on successful submission
+    try {
+      await axios.put(`${API_URL}/api/colleges/${collegeData.id}`, formData);
+      console.log('College data submitted successfully');
 
-        // Optionally reset the form after submission
-        setFormData({
-          name: '',
-          website: '',
-          location: '',
-          branch: '',
-          collegeType: '',
-          cutoff2023: '',
-          cutoff2022: '',
-          cutoff2021: '',
-          cutoff2020: ''
-        });
-      })
-      .catch(error => {
-        console.error('Error submitting college data:', error);
+      setSuccess(true);
+
+      // Optionally reset the form after submission
+      setFormData({
+        name: '',
+        website: '',
+        location: '',
+        branch: '',
+        collegeType: '',
+        cutoff2023: '',
+        cutoff2022: '',
+        cutoff2021: '',
+        cutoff2020: ''
       });
+    } catch (error) {
+      console.error('Error submitting college data:', error);
+    }
   };
 
   
@@ -95,12 +94,12 @@ function EditCollegeForm () {
         {/* Name */}
         <div>
           <label className="block text-sm font-medium">College Name</label>
-          <input 
-            type="text" 
-            name="name" 
-            value={formData.name} 
-            onChange={handleChange} 
-            className="border rounded w-full py-2 px-4" 
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="border rounded w-full py-2 px-4"
             required
           />
         </div>
@@ -108,24 +107,24 @@ function EditCollegeForm () {
         {/* Website */}
         <div>
           <label className="block text-sm font-medium">Website</label>
-          <input 
-            type="url" 
-            name="website" 
-            value={formData.website} 
-            onChange={handleChange} 
+          <input
+            type="text"
+            name="website"
+            value={formData.website}
+            onChange={handleChange}
             className="border rounded w-full py-2 px-4"
-            placeholder="https://example.com"
+            placeholder="example.com"
           />
         </div>
 
         {/* Location */}
         <div>
           <label className="block text-sm font-medium">Location</label>
-          <input 
-            type="text" 
-            name="location" 
-            value={formData.location} 
-            onChange={handleChange} 
+          <input
+            type="text"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
             className="border rounded w-full py-2 px-4"
             required
           />
@@ -150,11 +149,11 @@ function EditCollegeForm () {
         {/* College Type */}
         <div>
           <label className="block text-sm font-medium">College Type</label>
-          <input 
-            type="text" 
-            name="collegeType" 
-            value={formData.collegeType} 
-            onChange={handleChange} 
+          <input
+            type="text"
+            name="collegeType"
+            value={formData.collegeType}
+            onChange={handleChange}
             className="border rounded w-full py-2 px-4"
             placeholder="Minority, Non-Minority, etc"
           />
@@ -175,11 +174,11 @@ function EditCollegeForm () {
          <EditCollegeCutoffs collegeData={collegeData} categoryName={categoryName}/>
 
         {/* Submit Button */}
-        <button 
-          type="submit" 
+        <button
+          type="submit"
           className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
         >
-          Edit College
+          Save All Changes
         </button>
 
       </form>

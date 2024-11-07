@@ -1,14 +1,19 @@
 import React, { useState, useContext } from 'react';
 import { NotificationContext } from './NotificationContext';
+import NotificationList from './NotificationList';
 
 const NotificationForm = () => {
   const [notification, setNotification] = useState('');
-  const { addNotification } = useContext(NotificationContext);  // Get the addNotification function
+  const { addNotification } = useContext(NotificationContext);  // Add function from context
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addNotification(notification);  // Add the notification to the global state
-    setNotification('');  // Clear the form
+    if (notification.trim()) {
+      addNotification(notification);  // Add the notification to the global state
+      setNotification('');  // Clear the form
+    } else {
+      alert('Notification text cannot be empty!');
+    }
   };
 
   return (
@@ -29,6 +34,9 @@ const NotificationForm = () => {
           Add Notification
         </button>
       </form>
+      <div className='mt-6'>
+        <NotificationList />
+      </div>
     </div>
   );
 };
