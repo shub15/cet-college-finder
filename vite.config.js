@@ -10,7 +10,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       manifest: {
         name: 'CET College Finder',
-        short_name: 'ClgFinder',
+        short_name: 'COllege Finder',
         description: 'A React web app created with Vite',
         theme_color: '#ffffff',
         icons: [
